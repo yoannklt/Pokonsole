@@ -67,8 +67,8 @@ namespace Pokonsole.Source.Pokemon
         private int m_Level { get; set; }
 
         private string m_Name { get; set; } = "";
-        private bool m_CanAttack { get;
-            set 
+        private bool m_CanAttack { get => m_CanAttack;
+            set
             {
                 if (m_Status == POKEMON_STATUS.PARALYSED)
                     m_CanAttack = false;

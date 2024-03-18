@@ -1,4 +1,5 @@
 ﻿using Pokonsole.Source.Core;
+using Pokonsole.Source.Map;
 
 public class Program
 {
@@ -7,7 +8,11 @@ public class Program
     {
         GameManager game = new GameManager();
 
-        while(game.Running)
+        game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
+
+        game.Draw();
+
+        while(game._Running)
         {
             game.HandleEvent();
             game.Update();
