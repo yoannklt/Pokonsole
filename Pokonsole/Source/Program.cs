@@ -7,7 +7,7 @@ public class Program
     {
         GameManager game = new GameManager();
 
-        while(game.Running())
+        while(game.Running)
         {
             game.HandleEvent();
             game.Update();
@@ -15,6 +15,6 @@ public class Program
         }
         game.Quit();
     }
-
+    
     // VARIABLES MEMBRES
 }

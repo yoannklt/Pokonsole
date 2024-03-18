@@ -13,13 +13,12 @@ namespace Pokonsole.Source.Core
         }
         public void Draw() { }
         public void Quit() { }
-        public bool Running() { return IsRunning; }
 
         // VARIABLES MEMBRES
-        private bool IsRunning = true;
+        private bool Running { get; private set; } = true;
 
         // CLASSES
         Player.Player m_Player = new Player.Player();
         Pokemon.PokemonManager m_PokemonManager = new Pokemon.PokemonManager();
-
+    }
 }

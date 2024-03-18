@@ -12,6 +12,7 @@ namespace Pokonsole.Source.Pokemon
         FIRE,
         WATER,
         GRASS,
+        TOTAL_POKEMON_TYPE
         /*
         ELECTRIK,
         DARK,
@@ -31,7 +32,8 @@ namespace Pokonsole.Source.Pokemon
     {
         NORMAL = 0,
         PARALYSED,
-        POISONED
+        POISONED,
+        TOTAL_POKEMON_STATUS
     }
 
     internal class Pokemon
@@ -56,39 +58,26 @@ namespace Pokonsole.Source.Pokemon
             m_Captured = true;
         }
 
-        // GETTER / SETTER
-        public float GetHP() { return m_HealthPoint; } 
-        public float GetAttack() { return m_Attack; } 
-        public float GetDefense() { return m_Defense; } 
-        public float GetSpeed() { return m_Speed; } 
-        public int GetLevel() { return m_Level; }
-        public string GetName() { return m_Name; }
-        public bool CanAttack() { return m_CanAttack; }
-        public POKEMON_TYPE GetTYPE() { return m_Type; }
-        public POKEMON_STATUS GetStatus() { return m_Status; }
-        public bool GetCaptured() { return m_Captured; }
-        public void SetCanAttack()
-        {
-            if (m_Status != POKEMON_STATUS.PARALYSED)
-            {
-                m_CanAttack = true;
-            }
-        }
-
 
         // VARIABLES MEMBRES
-        private float m_HealthPoint;
-        private float m_Attack;
-        private float m_Defense;
-        private float m_Speed;
-        private int m_Level;
+        private float m_HealthPoint { get; set; }
+        private float m_Attack { get; set; }
+        private float m_Defense { get; set; }
+        private float m_Speed { get; set; }
+        private int m_Level { get; set; }
 
-        private string m_Name = "";
-        private bool m_CanAttack;
-        private bool m_Captured;
-        private POKEMON_TYPE m_Type;    
-        private POKEMON_STATUS m_Status = POKEMON_STATUS.NORMAL;
-        private Capacity[] m_Capacities = new Capacity[4];
+        private string m_Name { get; set; } = "";
+        private bool m_CanAttack { get;
+            set 
+            {
+                if (m_Status == POKEMON_STATUS.PARALYSED)
+                    m_CanAttack = false;
+            } 
+        }
+        private bool m_Captured { get; set; }
+        private POKEMON_TYPE m_Type { get; set; }
+        private POKEMON_STATUS m_Status { get; set; } = POKEMON_STATUS.NORMAL;
+        private Capacity[] m_Capacities { get; set; } = new Capacity[4];
 
     }
 }
