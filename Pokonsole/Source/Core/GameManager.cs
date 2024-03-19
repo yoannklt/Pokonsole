@@ -1,7 +1,4 @@
-﻿
-using Pokonsole.Source.Map;
-
-namespace Pokonsole.Source.Core
+﻿namespace Pokonsole.Source.Core
 {
     internal class GameManager
     {
@@ -11,49 +8,53 @@ namespace Pokonsole.Source.Core
         // METHODS
         public void HandleEvent()
         {
+            Console.SetCursorPosition(0, _Map._Size + 2);
             ConsoleKeyInfo key = Console.ReadKey();
+            
             switch (key.KeyChar)
             {
-                case 'Z':
-                    _Map.ClearTile(_Player._PosX, _Player._PosY + 1); 
-                    _Player.Move(0, -1, _Map._Size); 
+                case 'q':
+                    _Player.Move(-1, 0, ref _Map); 
                     break;
 
-                case 'Q':
-                    _Map.ClearTile(_Player._PosX + 1, _Player._PosY);
-                    _Player.Move(-1, 0, _Map._Size);
+                case 's':
+                    _Player.Move(0, 1, ref _Map);
                     break; 
 
-                case 'S':
-                    _Map.ClearTile(_Player._PosX, _Player._PosY - 1);
-                    _Player.Move(0, 1, _Map._Size);
+                case 'd':
+                    _Player.Move(1, 0, ref _Map);
                     break;
 
-                case 'D':
-                    _Map.ClearTile(_Player._PosX - 1, _Player._PosY - 1);
-                    _Player.Move(1, 0, _Map._Size);
+                case 'z':
+                    _Player.Move(0, -1, ref _Map);
+                    break;
+
+                case 'e':
+                    Console.SetCursorPosition(0, _Map._Size + 3);
+                    Console.Write(_Player.Interact(ref _Map));
                     break;
 
                 default:
                     break;
             }
+
+            Console.Write(" ");
         }
         public void Update()
         {
-            _Map.PlaceTile(Map.TileType.PLAYER, _Player._PosX, _Player._PosY);
+            _Map.Update();
         }
         public void Draw()
         {
-            _Map.Draw();        
         }
         public void Quit() { }
-        public bool IsRunning() { return _Running; }
+
         // VARIABLES MEMBRES
         public bool _Running = true;
 
         // CLASSES
         public Player.Player _Player = new();
-        Pokemon.PokemonManager _PokemonManager = new();
+        private Pokemon.PokemonManager _PokemonManager = new();
         public Map.Map _Map = new(20);
     }
 }

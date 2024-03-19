@@ -8,18 +8,17 @@ public class Program
     {
         GameManager game = new GameManager();
 
+        game._Map.LoadMap();
         game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
 
-        game.Draw();
+        game._Map.Draw();
 
         while(game._Running)
         {
             game.HandleEvent();
             game.Update();
-            game.Draw();   
+            game.Draw();
         }
         game.Quit();
     }
-    
-    // VARIABLES MEMBRES
 }
