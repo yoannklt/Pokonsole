@@ -1,0 +1,19 @@
+{
+  "PokemonList": {
+    "name": "Charmander",
+    "type": [ "Fire" ],
+    {
+      "Statistics": {
+        "LVL": 5,
+        "HP": 39,
+        "ATT": 52,
+        "DEF": 43,
+        "SPD": 65,
+        "ATTSPE": 60,
+        "DEFSPE": 50,
+        "ACC": 100,
+        "EVA": 20
+      } // end Statistics
+    } // end Charmander
+  }
+}

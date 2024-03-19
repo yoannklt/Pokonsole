@@ -33,7 +33,7 @@
             {
                 for (int j = 0; j < _Size; j++)
                 {
-                    Console.WriteLine(_Tile[i, j].GetString() + " ");
+                    Console.Write(_Tile[i, j].GetString() + " ");
                 }
                 Console.WriteLine();
             }

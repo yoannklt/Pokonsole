@@ -60,13 +60,13 @@ namespace Pokonsole.Source.Pokemon
 
 
         // VARIABLES MEMBRES
+        private string m_Name { get; set; } = "";
+        private int m_Level { get; set; }
         private float m_HealthPoint { get; set; }
         private float m_Attack { get; set; }
         private float m_Defense { get; set; }
         private float m_Speed { get; set; }
-        private int m_Level { get; set; }
 
-        private string m_Name { get; set; } = "";
         private bool m_CanAttack { get => m_CanAttack;
             set
             {
