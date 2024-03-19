@@ -1,0 +1,59 @@
+{
+  "PokemonList": {
+    "Infos": {
+      "name": "Charmander",
+      "type": "Fire"
+    },
+    {
+      "Statistics": {
+        "LVL": 5,
+        "HP": 10,
+        "ATT": 10,
+        "DEF": 10,
+        "ATTSPE": 10,
+        "DEFSPE": 10,
+        "SPD": 10,
+        "ACC": 10,
+        "EVA": 10
+      }
+    }
+  },
+  {
+    "Infos": {
+      "name": "Charmeleon",
+      "type": "Fire"
+    },
+    {
+      "Statistics": {
+        "LVL": 16,
+        "HP": 10,
+        "ATT": 10,
+        "DEF": 10,
+        "ATTSPE": 10,
+        "DEFSPE": 10,
+        "SPD": 10,
+        "ACC": 10,
+        "EVA": 10
+      }
+    }
+  }
+  {
+    "Infos": {
+      "name": "Charizard",
+      "type": "Fire"
+    },
+    {
+      "Statistics": {
+        "LVL": 36,
+        "HP": 10,
+        "ATT": 10,
+        "DEF": 10,
+        "ATTSPE": 10,
+        "DEFSPE": 10,
+        "SPD": 10,
+        "ACC": 10,
+        "EVA": 10
+      }
+    }
+  }
+}//END JSON
