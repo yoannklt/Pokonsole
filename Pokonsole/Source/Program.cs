@@ -1,5 +1,6 @@
 ﻿using Pokonsole.Source.Core;
 using Pokonsole.Source.Map;
+using Pokonsole.Source.Pokemon;
 
 public class Program
 {
@@ -14,6 +15,14 @@ public class Program
 
         while(game._Running)
         {
+            GameManager gameManager = new GameManager();
+            CapacityManager cm = new CapacityManager();
+            Capacity DanseLame = new Capacity("Danse Lame", POKEMON_TYPE.NORMAL, 50, 50);
+            
+            cm.addDico("Danse Lame", DanseLame);
+
+ 
+
             game.HandleEvent();
             game.Update();
             game.Draw();   
