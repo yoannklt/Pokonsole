@@ -17,7 +17,7 @@ public class Program
         {
             game.HandleEvent();
             game.Update();
-            game.Draw();
+            // game.Draw();   
         }
         game.Quit();
     }
