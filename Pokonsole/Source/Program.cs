@@ -1,4 +1,5 @@
 ﻿using Pokonsole.Source.Core;
+using Pokonsole.Source.Core.GameState;
 using Pokonsole.Source.Map;
 
 public class Program
@@ -6,6 +7,7 @@ public class Program
     // ENTRY POINT
     public static void Main(string[] args)
     {
+        Console.CursorVisible = false;
         GameManager game = new GameManager();
 
         game._Map.LoadMap();

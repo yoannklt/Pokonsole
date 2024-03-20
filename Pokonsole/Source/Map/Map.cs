@@ -1,4 +1,6 @@
-﻿namespace Pokonsole.Source.Map
+﻿using Pokonsole.Source.Items;
+
+namespace Pokonsole.Source.Map
 {
     internal class Map
     {
@@ -88,6 +90,9 @@
 
         private Tile[,] Tile;
         public Tile[,] _Tile { get { return Tile; } set { Tile = value; } }
+
+        public Item[,] Item;
+        public Item[,] _Item { get { return Item; } set { Item = value; } }
 
         private int Size = 0;
 
