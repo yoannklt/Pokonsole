@@ -1,17 +1,17 @@
-﻿using Pokonsole.Source.Items;
+﻿using Pokonsole.Source.Utils;
 
-namespace Pokonsole.Source.Map
+namespace Pokonsole.Source.Mapping
 {
     internal class Map
     {
-        public Map(int size)
+        public Map(int x, int y)
         {
-            _Size = size;
-            _Tile = new Tile[_Size, _Size];
+            Size = new MathHelper.Vector2(x, y);
+            _Tile = new Tile[Size.X, Size.Y];
 
-            for (int i = 0; i < _Size; i++)
+            for (int i = 0; i < Size.X; i++)
             {
-                for (int j = 0; j < _Size; j++)
+                for (int j = 0; j < Size.Y; j++)
                 {
                     _Tile[i, j] = new Tile(TileType.EMPTY);
                 }
@@ -30,19 +30,20 @@ namespace Pokonsole.Source.Map
                 PlaceTile(TileType.HORIZONTAL_WALL, i, 3);
             }
             PlaceTile(TileType.TREE, 18, 7);
+            PlaceTile(TileType.OBJECT, 19, 4);
         }
 
         public void PlaceTile(TileType type, int x, int y)
         {
-            if (x > _Size - 1 || y > _Size - 1) { return; }
+            if (x > Size.X - 1 || y > Size.Y - 1) { return; }
             _Tile[x, y] = new Tile(type);
         }
 
         public void Draw()
         {
-            for (int i = 0; i < _Size; i++)
+            for (int i = 0; i < Size.X; i++)
             {
-                for (int j = 0; j < _Size; j++)
+                for (int j = 0; j < Size.Y; j++)
                 {
                     Console.Write(_Tile[j, i].GetString() + " ");
                 }
@@ -53,15 +54,15 @@ namespace Pokonsole.Source.Map
 
         public void Update()
         {
-            for (int i = 0; i < _Size; i++)
+            for (int i = 0; i < Size.X; i++)
             {
-                for (int j = 0; j < _Size; j++)
+                for (int j = 0; j < Size.Y; j++)
                 {
                     if (_Tile[j, i]._TileType != TileType.EMPTY)
                     {
                         Console.SetCursorPosition(j * 2, i);
                         Console.Write(_Tile[j, i].GetString());
-                        Console.SetCursorPosition(0, _Size + 1);
+                        Console.SetCursorPosition(0, Size.Y + 1);
                     }
                     else
                     {
@@ -79,9 +80,9 @@ namespace Pokonsole.Source.Map
 
         public void ClearMap()
         {
-            for (int i = 0; i < _Size; i++)
+            for (int i = 0; i < Size.X; i++)
             {
-                for (int j = 0; j < _Size; j++)
+                for (int j = 0; j < Size.Y; j++)
                 {
                     _Tile[j, i] = new Tile(TileType.EMPTY);
                 }
@@ -91,12 +92,8 @@ namespace Pokonsole.Source.Map
         private Tile[,] Tile;
         public Tile[,] _Tile { get { return Tile; } set { Tile = value; } }
 
-        public Item[,] Item;
-        public Item[,] _Item { get { return Item; } set { Item = value; } }
-
-        private int Size = 0;
-
-        public int _Size { get { return Size; } set { Size = value; } }
+        private MathHelper.Vector2 _Size;
+        public MathHelper.Vector2 Size { get { return _Size; } set {  _Size = value; } }
 
     }
 }

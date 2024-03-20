@@ -1,14 +1,17 @@
-﻿namespace Pokonsole.Source.Map
+﻿namespace Pokonsole.Source.Mapping
 {
     public enum TileType
     {
-        EMPTY = 0,
-        WALL,
-        HORIZONTAL_WALL,
-        TREE,
+        None = 0,
+        BUSH,
+        EMPTY,
         ENEMY,
+        HORIZONTAL_WALL,
+        ITEM,
+        TREE,
         PLAYER,
-        OBJECT,
+        POKEMON,
+        WALL,
         TOTAL_TILE_TYPE
     }
 

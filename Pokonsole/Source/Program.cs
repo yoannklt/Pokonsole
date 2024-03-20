@@ -1,6 +1,5 @@
 ﻿using Pokonsole.Source.Core;
-using Pokonsole.Source.Core.GameState;
-using Pokonsole.Source.Map;
+using Pokonsole.Source.Mapping;
 
 public class Program
 {
@@ -10,16 +9,14 @@ public class Program
         Console.CursorVisible = false;
         GameManager game = new GameManager();
 
-        game._Map.LoadMap();
-        game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
-
-        game._Map.Draw();
+        game.Map.LoadMap();
+        game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
+        game.Draw();
 
         while(game._Running)
         {
             game.HandleEvent();
-            game.Update();
-            // game.Draw();   
+            game.Update();  
         }
         game.Quit();
     }

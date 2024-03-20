@@ -1,54 +1,61 @@
 ﻿
-using Pokonsole.Source.Core.GameState;
+using Pokonsole.Source.Mapping;
+using Pokonsole.Source.Actors.Player;
 
 namespace Pokonsole.Source.Core
 {
     internal class GameManager
     {
         // CONSTRUCTOR
-        public GameManager() { }
+        public GameManager() 
+        {
+            Map = new Map(20, 20);
+            Player = new Player(ref rMap);
+        }
 
         // METHODS
         public void HandleEvent()
         {
-            Console.SetCursorPosition(0, _Map._Size + 2);
+            Console.SetCursorPosition(0, Map.Size.Y + 2);
             ConsoleKeyInfo key = Console.ReadKey();
             
             switch (key.KeyChar)
             {
                 case 'q':
-                    _Player.Move(-1, 0, ref _Map); 
+                    Player.Move(-1, 0); 
                     break;
 
                 case 's':
-                    _Player.Move(0, 1, ref _Map);
+                    Player.Move(0, 1);
                     break; 
 
                 case 'd':
-                    _Player.Move(1, 0, ref _Map);
+                    Player.Move(1, 0);
                     break;
 
                 case 'z':
-                    _Player.Move(0, -1, ref _Map);
+                    Player.Move(0, -1);
                     break;
 
                 case 'e':
-                    Console.SetCursorPosition(0, _Map._Size + 3);
-                    Console.Write(_Player.Interact(ref _Map));
+                    Console.SetCursorPosition(0, Map.Size.Y + 3);
+                    Console.Write(Player.Interact());
                     break;
 
                 default:
                     break;
             }
-
+            Console.SetCursorPosition(0, Map.Size.Y + 2);
             Console.Write(" ");
         }
         public void Update()
         {
-            _Map.Update();
+            Map.Update();
+            Player.Update();
         }
         public void Draw()
         {
+            Map.Draw();
         }
         public void Quit() { }
 
@@ -56,9 +63,10 @@ namespace Pokonsole.Source.Core
         public bool _Running = true;
 
         // CLASSES
-        public GameState.GameState _GameState = new MenuState();
-        public Player.Player _Player = new();
-        private Pokemon.PokemonManager _PokemonManager = new();
-        public Map.Map _Map = new(20);
+        private Map? _Map;
+        private Player? _Player;
+        public Map Map { get { return _Map; } set => _Map = value; }
+        public ref Map rMap { get { return ref _Map; }}
+        public Player Player { get { return _Player; } set => _Player = value; }
     }
 }
