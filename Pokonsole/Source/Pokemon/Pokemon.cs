@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokonsole.Source.Pokemon
 {
+    //ENUMS
     enum POKEMON_TYPE
     {
         NORMAL = 0,
@@ -13,76 +14,111 @@ namespace Pokonsole.Source.Pokemon
         WATER,
         GRASS,
         TOTAL_POKEMON_TYPE
-        /*
-        ELECTRIK,
-        DARK,
-        FIGHTING,
-        PSYCHIC,
-        FLYING,
-        GROUND,
-        BUG,
-        POISON,
-        FAIRY,
-        GHOST,
-        ICE,
-        STEEL,*/
     }
 
     enum POKEMON_STATUS
     {
         NORMAL = 0,
         PARALYSED,
-        POISONED,
+        //BURNED,
+       // POISONED,
         TOTAL_POKEMON_STATUS
     }
-
+    //CONSTRUCTEUR 
     internal class Pokemon
     {
-        public Pokemon() { }
-
-        // METHODS
-        public void Update() 
+        public Pokemon()
         {
-            if (m_HealthPoint == 0)
+            _Name = "";
+            _Type = POKEMON_TYPE.NORMAL;
+            _Status = POKEMON_STATUS.NORMAL;
+            _Hp = 0;
+            _Level = 0;
+            _Attack = 0;
+            _Defense = 0;
+            _Speed = 0;
+            _SpecialAttack = 0;
+            _SpecialDefense = 0;
+            _Accuracy = 100;
+            _CapacityList = new List<string>();
+            _IsWild = false;
+        }
+
+        //METHODES 
+        /// <summary>
+        /// ON VA CREER UNE METHODE QUI VA PERMETTRE D'AJOUTER UNE CAPACITE A UN POKEMON
+        public void AddCapacity(string capacityName)
+        {
+            _CapacityList.Add(capacityName);
+        }
+        /// </summary>
+        /// onCombatEnter()
+        public void onCombatEnter() { 
+            if (_IsWild == true)
             {
-                OnDie();
+                Console.WriteLine("A wild " + _Name + " appeared !");
+            }
+            else
+            {
+                Console.WriteLine(_Name + " is ready to fight !");
             }
         }
-        public void OnAttack() { }
-        public void OnEscape() { }
-        public void OnDie() { }
-        public void OnEnter() { }
-        public void OnExit() { }
-        public void OnCapture() 
+        /// onCombatDefeate()
+        public void onCombatDefeate()
         {
-            m_Captured = true;
-        }
-
-
-        // VARIABLES MEMBRES
-        private string m_Name { get; set; }
-        private int m_Level { get; set; }
-        private float m_HealthPoint { get; set; }
-        private float m_Attack { get; set; }
-        private float m_Defense { get; set; }
-        private float m_Speed { get; set; }
-        private float m_SpecialAttack { get; set; }
-        private float m_SpecialDefense { get; set; }
-        private float m_Accuracy { get; set; }
-        private float m_Evasion { get; set; }
-
-
-        private bool m_CanAttack { get => m_CanAttack;
-            set
+            if (_IsWild == true)
             {
-                if (m_Status == POKEMON_STATUS.PARALYSED)
-                    m_CanAttack = false;
-            } 
+                Console.WriteLine("The wild " + _Name + " fainted !");
+            }
+            else
+            {
+                Console.WriteLine(_Name + " fainted !");
+            }
         }
-        private bool m_Captured { get; set; }
-        private POKEMON_TYPE m_Type { get; set; }
-        private POKEMON_STATUS m_Status { get; set; } = POKEMON_STATUS.NORMAL;
-        private Capacity[] m_Capacities { get; set; } = new Capacity[4];
+        /// onCombatExit()
+        public void onCombatExit()
+        {
+            if (_IsWild == true)
+            {
+                Console.WriteLine("The wild " + _Name + " ran away !");
+            }
+            else
+            {
+                onCombatDefeate();
+            }
+        }
+        // attack(POKEMON target)
+        public void attack() { }
+        /// onCombatVictory()
+        /// ???? isMyCombatTurn()
+        /// onCapture()
+        /// onUseItem()
 
+        //METHODES GETTERS / SETTERS
+        public string _Name { get; set; }
+        public POKEMON_TYPE _Type { get; set; }
+        public POKEMON_STATUS _Status { get; set; }
+
+        public int Hp { get => _Hp; set => _Hp = value; }
+        public int Level { get => _Level; set => _Level = value; }
+        public int Attack { get => _Attack; set => _Attack = value; }
+        public int Defense { get => _Defense; set => _Defense = value; }
+        public int Speed { get => _Speed; set => _Speed = value; }
+        public int SpecialAttack { get => _SpecialAttack; set => _SpecialAttack = value; }
+        public int SpecialDefense { get => _SpecialDefense; set => _SpecialDefense = value; }
+        public int Accuracy { get => _Accuracy; set => _Accuracy = value; }
+        public bool IsWild { get => _IsWild; set => _IsWild = value; }
+
+        //VARIABLE PRIVEES
+        private List<string> _CapacityList;
+        private int _Hp;
+        private int _Level;
+        private int _Attack;
+        private int _Defense;
+        private int _Speed;
+        private int _SpecialAttack;
+        private int _SpecialDefense;
+        private int _Accuracy;
+        private bool _IsWild;
     }
 }
