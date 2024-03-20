@@ -11,7 +11,7 @@ namespace Pokonsole.Source.Actors.Player
 
         public override string Interact()
         {
-            TileType FacingTile = Map._Tile[Position.X + Direction.X, Position.Y + Direction.Y]._TileType;
+            TileType FacingTile = Map.Tile[Position.X + Direction.X, Position.Y + Direction.Y]._TileType;
             Console.Write("                                   ");
             Console.SetCursorPosition(0, Map.Size.Y + 3);
 
@@ -29,7 +29,7 @@ namespace Pokonsole.Source.Actors.Player
                 case TileType.ENEMY:
                     return "AKHAAAAAAAAAAA!!";
 
-                case TileType.OBJECT:
+                case TileType.ITEM:
                     return "Object collected: ";
 
                 default:

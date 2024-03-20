@@ -1,5 +1,5 @@
 ﻿
-namespace Pokonsole.Source.Pokemon
+namespace Pokonsole.Source.Pokemons
 {
     enum POKEMON_TYPE
     {
@@ -38,7 +38,7 @@ namespace Pokonsole.Source.Pokemon
         // METHODS
         public void Update() 
         {
-            if (_HealthPoint == 0)
+            if (_Health == 0)
             {
                 Die();
             }
@@ -55,7 +55,8 @@ namespace Pokonsole.Source.Pokemon
 
 
         // VARIABLES MEMBRES
-        private float _HealthPoint { get; set; }
+        private float _Health = 100.0f;
+        public float Health { get => _Health; set => _Health = value; }
         private float _Attack { get; set; }
         private float _Defense { get; set; }
         private float _Speed { get; set; }

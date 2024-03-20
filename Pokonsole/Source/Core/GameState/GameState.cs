@@ -1,6 +1,6 @@
 ﻿namespace Pokonsole.Source.Core.GameState
 {
-    internal class GameState
+    internal abstract class GameState
     {
     }
 }

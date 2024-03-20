@@ -1,4 +1,4 @@
-﻿namespace Pokonsole.Source.Pokemon
+﻿namespace Pokonsole.Source.Pokemons
 {
     internal class Capacity
     {

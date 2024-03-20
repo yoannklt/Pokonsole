@@ -34,7 +34,7 @@ namespace Pokonsole.Source.Actors
             if (nextPosX < 0 || nextPosX + x > Map.Size.X) { return; }
             if (nextPosY + y < 0 || nextPosY + y > Map.Size.Y) { return; }
 
-            if (Map._Tile[nextPosX, nextPosY]._TileType != TileType.EMPTY) { return; }
+            if (Map.Tile[nextPosX, nextPosY]._TileType != TileType.EMPTY) { return; }
             
             SetPosition(nextPosX, nextPosY);
 
