@@ -45,12 +45,12 @@ namespace Pokonsole.Source.Pokemon
         {
             if (m_HealthPoint == 0)
             {
-                Die();
+                OnDie();
             }
         }
-        public void Attack() { }
-        public void Escape() { }
-        public void Die() { }
+        public void OnAttack() { }
+        public void OnEscape() { }
+        public void OnDie() { }
         public void OnEnter() { }
         public void OnExit() { }
         public void OnCapture() 
@@ -60,12 +60,17 @@ namespace Pokonsole.Source.Pokemon
 
 
         // VARIABLES MEMBRES
-        private string m_Name { get; set; } = "";
+        private string m_Name { get; set; }
         private int m_Level { get; set; }
         private float m_HealthPoint { get; set; }
         private float m_Attack { get; set; }
         private float m_Defense { get; set; }
         private float m_Speed { get; set; }
+        private float m_SpecialAttack { get; set; }
+        private float m_SpecialDefense { get; set; }
+        private float m_Accuracy { get; set; }
+        private float m_Evasion { get; set; }
+
 
         private bool m_CanAttack { get => m_CanAttack;
             set
