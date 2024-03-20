@@ -7,19 +7,14 @@ namespace Pokonsole.Source.Mapping
         public Map(int x, int y)
         {
             Size = new MathHelper.Vector2(x, y);
-            _Tile = new Tile[Size.X, Size.Y];
-
-            for (int i = 0; i < Size.X; i++)
-            {
-                for (int j = 0; j < Size.Y; j++)
-                {
-                    _Tile[i, j] = new Tile(TileType.EMPTY);
-                }
-            }
+            Tile = new Tile[Size.X, Size.Y];
         }
 
         public void LoadMap()
         {
+
+            ClearMap();
+
             PlaceTile(TileType.ENEMY, 9, 4);
             for (int i = 0; i < 4; i++)
             {
@@ -30,13 +25,13 @@ namespace Pokonsole.Source.Mapping
                 PlaceTile(TileType.HORIZONTAL_WALL, i, 3);
             }
             PlaceTile(TileType.TREE, 18, 7);
-            PlaceTile(TileType.OBJECT, 19, 4);
+            PlaceTile(TileType.ITEM, 19, 4);
         }
 
         public void PlaceTile(TileType type, int x, int y)
         {
-            if (x > Size.X - 1 || y > Size.Y - 1) { return; }
-            _Tile[x, y] = new Tile(type);
+            if (x > Size.X - 1 || y > Size.Y - 1) return; 
+            Tile[x, y] = new Tile(type);
         }
 
         public void Draw()
@@ -45,7 +40,7 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    Console.Write(_Tile[j, i].GetString() + " ");
+                    Console.Write(Tile[j, i].GetString() + " ");
                 }
                 Console.WriteLine();
             }
@@ -58,7 +53,7 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    if (_Tile[j, i]._TileType != TileType.EMPTY)
+                    if (Tile[j, i]._TileType != TileType.EMPTY)
                     {
                         Console.SetCursorPosition(j * 2, i);
                         Console.Write(_Tile[j, i].GetString());
@@ -75,7 +70,7 @@ namespace Pokonsole.Source.Mapping
 
         public void ClearTile(int x, int y)
         {
-            _Tile[x, y] = new Tile(TileType.EMPTY);
+            Tile[x, y] = new Tile(TileType.EMPTY);
         }
 
         public void ClearMap()
@@ -84,15 +79,15 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    _Tile[j, i] = new Tile(TileType.EMPTY);
+                    Tile[j, i] = new Tile(TileType.EMPTY);
                 }
             }
         }
 
-        private Tile[,] Tile;
-        public Tile[,] _Tile { get { return Tile; } set { Tile = value; } }
+        private Tile[,]? _Tile;
+        public Tile[,] Tile { get { return _Tile; } set { _Tile = value; } }
 
-        private MathHelper.Vector2 _Size;
+        private MathHelper.Vector2 _Size = new MathHelper.Vector2(0, 0);
         public MathHelper.Vector2 Size { get { return _Size; } set {  _Size = value; } }
 
     }

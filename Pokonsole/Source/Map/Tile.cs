@@ -23,6 +23,12 @@
         {
             switch (Type)
             {
+                case TileType.BUSH:
+                    return "B";
+
+                case TileType.POKEMON:
+                    return "P";
+
                 case TileType.EMPTY:
                     return " ";
 
@@ -38,8 +44,8 @@
                 case TileType.PLAYER:
                     return "P";
 
-                    case TileType.OBJECT:
-                        return "O";
+                case TileType.ITEM:
+                    return "O";
 
                 case TileType.HORIZONTAL_WALL:
                     return "_";
