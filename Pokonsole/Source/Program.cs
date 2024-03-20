@@ -1,4 +1,5 @@
 ﻿using Pokonsole.Source.Core;
+using Pokonsole.Source.Core.GameState;
 using Pokonsole.Source.Map;
 using Pokonsole.Source.Pokemon;
 
@@ -7,11 +8,13 @@ public class Program
     // ENTRY POINT
     public static void Main(string[] args)
     {
+        Console.CursorVisible = false;
         GameManager game = new GameManager();
 
+        game._Map.LoadMap();
         game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
 
-        game.Draw();
+        game._Map.Draw();
 
         while(game._Running)
         {
@@ -25,10 +28,8 @@ public class Program
 
             game.HandleEvent();
             game.Update();
-            game.Draw();   
+            // game.Draw();   
         }
         game.Quit();
     }
-    
-    // VARIABLES MEMBRES
 }

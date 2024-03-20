@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Pokonsole.Source.Pokemon
 {
     enum POKEMON_TYPE
@@ -43,7 +38,7 @@ namespace Pokonsole.Source.Pokemon
         // METHODS
         public void Update() 
         {
-            if (m_HealthPoint == 0)
+            if (_HealthPoint == 0)
             {
                 Die();
             }
@@ -60,18 +55,18 @@ namespace Pokonsole.Source.Pokemon
 
 
         // VARIABLES MEMBRES
-        private float m_HealthPoint { get; set; }
-        private float m_Attack { get; set; }
-        private float m_Defense { get; set; }
-        private float m_Speed { get; set; }
-        private int m_Level { get; set; }
+        private float _HealthPoint { get; set; }
+        private float _Attack { get; set; }
+        private float _Defense { get; set; }
+        private float _Speed { get; set; }
+        private int _Level { get; set; }
 
-        private string m_Name { get; set; } = "";
-        private bool m_CanAttack { get => m_CanAttack;
+        private string _Name { get; set; } = "";
+        private bool _CanAttack { get => _CanAttack;
             set
             {
                 if (m_Status == POKEMON_STATUS.PARALYSED)
-                    m_CanAttack = false;
+                    _CanAttack = false;
             } 
         }
         private bool m_Captured { get; set; }

@@ -4,19 +4,21 @@
     {
         EMPTY = 0,
         WALL,
+        HORIZONTAL_WALL,
         TREE,
         ENEMY,
         PLAYER,
+        OBJECT,
         TOTAL_TILE_TYPE
     }
 
     internal class Tile
     {
-        public Tile(TileType tileType) => _TileType = tileType;
+        public Tile(TileType tileType) => Type = tileType;
 
         public string GetString()
         {
-            switch (_TileType)
+            switch (Type)
             {
                 case TileType.EMPTY:
                     return " ";
@@ -33,11 +35,19 @@
                 case TileType.PLAYER:
                     return "P";
 
+                    case TileType.OBJECT:
+                        return "O";
+
+                case TileType.HORIZONTAL_WALL:
+                    return "_";
+
                 default:
                     return " ";
             }
         }
 
-        private TileType _TileType;
+        public TileType _TileType { get => Type; set { Type = value; } }
+
+        private TileType Type;
     }
 }
