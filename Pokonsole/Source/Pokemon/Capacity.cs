@@ -3,23 +3,23 @@
     internal class Capacity
     {
         //CONSTRUTEUR
-        public Capacity(string name, POKEMON_TYPE type, int power, int accuracy /*POKEMON_STATUS effet = POKEMON_STATUS.NORMAL*/) 
+        public Capacity(string name, POKEMON_TYPE type, int power, int accuracy, POKEMON_STATUS effet = POKEMON_STATUS.NORMAL) 
         {
             Name = name;
             Type = type;
             Power = power;
             Accuracy = accuracy;
-            //Status = effet; //? Si le pokémon est déjà POISONED et qu'il prends une attaque Charge de status NORMAL, le pokemon reste POISONED ou deviens NORMAL ? 
+            Status = effet; //? Si le pokémon est déjà POISONED et qu'il prends une attaque Charge de status NORMAL, le pokemon reste POISONED ou deviens NORMAL ? 
         }
 
-        public Capacity(string name, POKEMON_TYPE type, int power, int accuracy, POKEMON_STATUS effet) 
+        /*public Capacity(string name, POKEMON_TYPE type, int power, int accuracy, POKEMON_STATUS effet) 
         { 
             Name = name;
             Type = type;
             Power = power;
             Accuracy = accuracy;
             Status = effet;
-        }
+        }*/
 
         //METHODES
         public void AttackBuff(Pokemon target)
@@ -41,6 +41,10 @@
         public void SpeedBuff(Pokemon target)
         {
             target.Speed = target.Speed + Power;
+        }
+        public void ApplyStatus(Pokemon target)
+        {
+            target.State = Status;
         }
 
         //METHODES GETTER / SETTER
