@@ -1,4 +1,4 @@
-﻿namespace Pokonsole.Source.Pokemon
+﻿namespace Pokonsole.Source.Pokemons
 {
     internal class Capacity
     {
@@ -24,7 +24,7 @@
         //METHODES
         public void AttackBuff(Pokemon target)
         {
-            target.Attack1 = target.Attack1 + Power;
+            target.Attack = target.Attack + Power;
         }
         public void DefenseBuff(Pokemon target)
         {
@@ -32,11 +32,11 @@
         }
         public void AttackSpeBuff(Pokemon target)
         {
-            target.AttackSpe = target.AttackSpe + Power;
+            target.SpecialAttack = target.SpecialAttack + Power;
         }
         public void DefenseSpeBuff(Pokemon target)
         {
-            target.DefenseSpe = target.DefenseSpe + Power;
+            target.SpecialDefense = target.SpecialDefense + Power;
         }
         public void SpeedBuff(Pokemon target)
         {
@@ -44,7 +44,28 @@
         }
         public void ApplyStatus(Pokemon target)
         {
-            target.State = Status;
+            target._Status = Status;
+        }
+        public void CapacityDamage(Pokemon target)
+        {
+            var rand = new Random();
+            if (Accuracy == 100)
+            {
+                Console.WriteLine("Attack 1");
+                target.Hp = target.Hp - Power;
+                Console.WriteLine(target.Hp);
+
+            }
+            else if (rand.Next(0, 101) <= Accuracy)
+            {
+                Console.WriteLine("Attack 2");
+                target.Hp = target.Hp - Power;
+                Console.WriteLine(target.Hp);
+            }
+            else
+            {
+                Console.WriteLine("Attack missed");
+            }
         }
 
         //METHODES GETTER / SETTER

@@ -1,6 +1,6 @@
 ﻿using Pokonsole.Source.Core;
 using Pokonsole.Source.Map;
-using Pokonsole.Source.Pokemon;
+using Pokonsole.Source.Pokemons;
 using System.Xml.Linq;
 
 public class Program
@@ -14,25 +14,18 @@ public class Program
 
         //game.Draw();
         Pokemon pokemon1 = new Pokemon();
-        Capacity firstCapa = new Capacity("Charge", POKEMON_TYPE.NORMAL, 40, 100);
-        //Capacity secCapa = new Capacity("Poison", POKEMON_TYPE.POISON, 35, 100, POKEMON_STATUS.POISONED);
+        //Capacity firstCapa = new Capacity("Charge", POKEMON_TYPE.NORMAL, 1, 100);
+        Capacity firstCapa = new Capacity("Poison", POKEMON_TYPE.POISON, 35, 50, POKEMON_STATUS.POISONED);
         Console.WriteLine(firstCapa.Name);
         Console.WriteLine(firstCapa.Type);
         Console.WriteLine(firstCapa.Power);
         Console.WriteLine(firstCapa.Accuracy);
-       /* Console.WriteLine(secCapa.Name);
-        Console.WriteLine(secCapa.Type);
-        Console.WriteLine(secCapa.Power);
-        Console.WriteLine(secCapa.Accuracy);
-        Console.WriteLine(secCapa.Status);*/
 
         CapacityManager capaManager = new CapacityManager();
-        capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
-        capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
-        capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
-        capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
-        capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
-        Console.WriteLine(capaManager.CapacityCreated);
+        Capacity Capa1 = capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
+        capaManager.addDico("Danse Lame", Capa1);
+        Console.WriteLine(capaManager.Capacitys["Danse Lame"].Name);
+        firstCapa.CapacityDamage(pokemon1);
 
         while (game._Running)
         {
