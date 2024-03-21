@@ -53,7 +53,7 @@ namespace Pokonsole.Source.Core
 
         // CLASSES
         public Player.Player _Player = new();
-        Pokemon.PokemonManager _PokemonManager = new();
+        //Pokemon.PokemonManager _PokemonManager = new();
         public Map.Map _Map = new(20);
     }
 }

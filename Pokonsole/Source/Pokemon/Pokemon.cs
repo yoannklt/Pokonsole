@@ -13,6 +13,7 @@ namespace Pokonsole.Source.Pokemon
         FIRE,
         WATER,
         GRASS,
+        POISON,
         TOTAL_POKEMON_TYPE
     }
 
