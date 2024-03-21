@@ -12,8 +12,31 @@ namespace Pokonsole.Source.Mapping
 
         public void LoadMap()
         {
+            try
+            {
+                using (StreamReader sr = new("../../../Source/Data/Map.txt"))
+                {
+                    int line;
+                    for (int i = 0; i < Size.X; i++)
+                    {
+                        for (int j = 0; j < Size.Y; j++)
+                        {
+                            line = sr.Read();
+                            //Console.Write(line);
+                            if (line != -1)
+                                PlaceTile(ConvertToTileType((char)line), j, i);
+                            else
+                                j--;
+                        }
+                    }
 
-            ClearMap();
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            /*ClearMap();
 
             PlaceTile(TileType.ENEMY, 9, 4);
             for (int i = 0; i < 4; i++)
@@ -25,7 +48,33 @@ namespace Pokonsole.Source.Mapping
                 PlaceTile(TileType.HORIZONTAL_WALL, i, 3);
             }
             PlaceTile(TileType.TREE, 18, 7);
-            PlaceTile(TileType.ITEM, 19, 4);
+            PlaceTile(TileType.ITEM, 19, 4);*/
+        }
+
+        public TileType ConvertToTileType(char c)
+        {
+            switch (c)
+            {
+                case '0':
+                    return TileType.EMPTY;
+
+                case '1':
+                    return TileType.ENEMY;
+
+                case '2':
+                    return TileType.BUSH;
+
+                case '3':
+                    return TileType.TREE;
+
+                case '4':
+                    return TileType.HORIZONTAL_WALL;
+
+                case '5':
+                    return TileType.WALL;
+
+                default : return TileType.EMPTY;
+            }
         }
 
         public void PlaceTile(TileType type, int x, int y)
@@ -53,16 +102,16 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    if (Tile[j, i]._TileType != TileType.EMPTY)
+                    if (Tile[j, i].TileType != TileType.EMPTY) 
                     {
                         Console.SetCursorPosition(j * 2, i);
-                        Console.Write(_Tile[j, i].GetString());
+                        Console.Write(Tile[j, i].GetString());
                         Console.SetCursorPosition(0, Size.Y + 1);
                     }
                     else
                     {
                         Console.SetCursorPosition(j * 2, i);
-                        Console.Write(" ");
+                        Console.Write(".");
                     }
                 }
             }

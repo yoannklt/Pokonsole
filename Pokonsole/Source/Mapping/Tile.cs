@@ -30,7 +30,7 @@
                     return "P";
 
                 case TileType.EMPTY:
-                    return " ";
+                    return ".";
 
                 case TileType.WALL:
                     return "|";
@@ -55,7 +55,7 @@
             }
         }
 
-        public TileType _TileType { get => Type; set { Type = value; } }
+        public TileType TileType { get => Type; set { Type = value; } }
 
         private TileType Type;
     }

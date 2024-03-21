@@ -34,12 +34,12 @@ namespace Pokonsole.Source.Actors
             if (nextPosX < 0 || nextPosX + x > Map.Size.X) { return; }
             if (nextPosY + y < 0 || nextPosY + y > Map.Size.Y) { return; }
 
-            if (Map.Tile[nextPosX, nextPosY]._TileType != TileType.EMPTY) { return; }
+            if (Map.Tile[nextPosX, nextPosY].TileType != TileType.EMPTY) { return; }
             
             SetPosition(nextPosX, nextPosY);
+            Map.PlaceTile(TileType.PLAYER, Position.X, Position.Y);
 
             Map.ClearTile(Position.X - x, Position.Y - y);
-            Map.PlaceTile(TileType.PLAYER, Position.X, Position.Y);
         }
 
         public abstract string Interact();
