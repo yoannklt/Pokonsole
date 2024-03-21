@@ -2,12 +2,12 @@
 
 namespace Pokonsole.Source.Items
 {
-    struct ItemData
+    struct ITEM_DATA
     {
         string? name;
         public string Name { get { return name; } set => name = value; }
 
-        public ItemData(string name)
+        public ITEM_DATA(string name)
         {
             Name = name;
         }
@@ -17,7 +17,7 @@ namespace Pokonsole.Source.Items
     {
         public Item() 
         {
-            ItemData = new ItemData();
+            ItemData = new ITEM_DATA();
             Pokemon = new Pokemon();
         }
 
@@ -31,8 +31,8 @@ namespace Pokonsole.Source.Items
         private Pokemon? _Pokemon;
         public Pokemon Pokemon { get { return _Pokemon; } set { _Pokemon = value; } }
 
-        private ItemData _ItemData;
-        public ItemData ItemData { get { return _ItemData; } set { _ItemData = value; } }
+        private ITEM_DATA _ItemData;
+        public ITEM_DATA ItemData { get { return _ItemData; } set { _ItemData = value; } }
 
         private int _amount;
         public int Amount { get { return _amount;} set { _amount = value; } }

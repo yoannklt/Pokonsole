@@ -11,7 +11,7 @@ namespace Pokonsole.Source.Accessories
 
         public void AddItem(Item item)
         {
-            var found = Items.FirstOrDefault(i => i.ItemData.Name == item.ItemData.Name);
+            var found = Items.FirstOrDefault(i => i.ItemData.Name == item.ItemData.Name); 
             if (found !=null)
             {
                 found.Amount++;

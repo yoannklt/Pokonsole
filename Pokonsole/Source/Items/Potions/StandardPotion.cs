@@ -5,7 +5,7 @@ namespace Pokonsole.Source.Items.Potions
     {
         public StandardPotion() 
         {
-            ItemData = new ItemData("Potion");
+            ItemData = new ITEM_DATA("Potion");
             Amount++;
         }
 

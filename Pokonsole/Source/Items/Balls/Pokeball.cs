@@ -5,7 +5,7 @@ namespace Pokonsole.Source.Items.Balls
     {
         public Pokeball()
         {
-            ItemData = new ItemData("Pokeball");
+            ItemData = new ITEM_DATA("Pokeball");
             Amount++;
         }
 
