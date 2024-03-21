@@ -8,6 +8,10 @@ namespace Pokonsole.Source.Core.GameState
 {
     internal class MenuState : GameState
     {
-        public MenuState() { }
+
+        public MenuState() 
+        {
+            
+        }
     }
 }
