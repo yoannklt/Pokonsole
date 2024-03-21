@@ -16,39 +16,25 @@ namespace Pokonsole.Source.Mapping
             {
                 using (StreamReader sr = new("../../../Source/Data/Map.txt"))
                 {
-                    int line;
-                    for (int i = 0; i < Size.X; i++)
+                    var txt = sr.ReadToEnd();
+                    string[] allLines = txt.Split("\r\n");
+
+                    for (int i = 0; i < allLines.Length; i++)
                     {
-                        for (int j = 0; j < Size.Y; j++)
+                        for(int j = 0; j < allLines[i].Length; j++)
                         {
-                            line = sr.Read();
-                            //Console.Write(line);
-                            if (line != -1)
-                                PlaceTile(ConvertToTileType((char)line), j, i);
-                            else
-                                j--;
+                            TileType type = ConvertToTileType(allLines[j][i]);
+                            PlaceTile(type, i, j); 
                         }
                     }
 
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
-            /*ClearMap();
-
-            PlaceTile(TileType.ENEMY, 9, 4);
-            for (int i = 0; i < 4; i++)
-            {
-                PlaceTile(TileType.WALL, 5, i);
-            }
-            for (int i = 6; i < 9; i++)
-            {
-                PlaceTile(TileType.HORIZONTAL_WALL, i, 3);
-            }
-            PlaceTile(TileType.TREE, 18, 7);
-            PlaceTile(TileType.ITEM, 19, 4);*/
         }
 
         public TileType ConvertToTileType(char c)
@@ -72,6 +58,9 @@ namespace Pokonsole.Source.Mapping
 
                 case '5':
                     return TileType.WALL;
+
+                case '6':
+                    return TileType.ANGULAR_WALL;
 
                 default : return TileType.EMPTY;
             }

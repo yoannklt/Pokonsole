@@ -11,7 +11,7 @@ namespace Pokonsole.Source.Actors.Player
 
         public override string Interact()
         {
-            TileType FacingTile = Map.Tile[Position.X + Direction.X, Position.Y + Direction.Y].TileType;
+            TileType FacingTile = Map.Tile[Position.X + Direction.X, Position.Y + Direction.Y].TileType; 
             Console.Write("                                   ");
             Console.SetCursorPosition(0, Map.Size.Y + 3);
 

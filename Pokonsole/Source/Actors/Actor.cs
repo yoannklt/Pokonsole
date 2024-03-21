@@ -32,7 +32,7 @@ namespace Pokonsole.Source.Actors
             int nextPosY = Position.Y + y;
 
             if (nextPosX < 0 || nextPosX + x > Map.Size.X) { return; }
-            if (nextPosY + y < 0 || nextPosY + y > Map.Size.Y) { return; }
+            if (nextPosY < 0 || nextPosY + y > Map.Size.Y) { return; }
 
             if (Map.Tile[nextPosX, nextPosY].TileType != TileType.EMPTY) { return; }
             

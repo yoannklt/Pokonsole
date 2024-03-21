@@ -1,8 +1,11 @@
-﻿namespace Pokonsole.Source.Mapping
+﻿using System.Security.AccessControl;
+
+namespace Pokonsole.Source.Mapping
 {
     public enum TileType
     {
         None = 0,
+        ANGULAR_WALL,
         BUSH,
         EMPTY,
         ENEMY,

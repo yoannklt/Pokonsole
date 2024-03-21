@@ -1,6 +1,4 @@
 ﻿using Pokonsole.Source.Items;
-using Pokonsole.Source.Items.Potions;
-using Pokonsole.Source.Items.Balls;
 
 namespace Pokonsole.Source.Accessories
 {
@@ -8,35 +6,24 @@ namespace Pokonsole.Source.Accessories
     {
         public Inventory()
         {
-            ItemsDictionary = new Dictionary<Item.ITEM_TYPE, Item>();
-            StandardPotions = new List<Potion>();
-            Pokeballs = new List<Ball>();
+            Items = new List<Item>();
         }
 
-        public void AddItem(dynamic item, Item.ITEM_TYPE flag)
+        public void AddItem(Item item)
         {
-            switch(flag)
+            var found = Items.FirstOrDefault(i => i.ItemData.Name == item.ItemData.Name);
+            if (found !=null)
             {
-                case Item.ITEM_TYPE.POTION:
-                    StandardPotions.Add(item);
-                    break;
-
-                case Item.ITEM_TYPE.BALL:
-                    Pokeballs.Add(item);
-                    break;
-
-                default:
-                    break;
+                found.Amount++;
             }
+            else
+            {
+                Items.Add(item);
+            }
+
         }
 
-        private Dictionary<Item.ITEM_TYPE, Item>? _ItemsDictionary;
-        public Dictionary<Item.ITEM_TYPE, Item> ItemsDictionary { get { return _ItemsDictionary; } set => ItemsDictionary = value; }
-
-        private List<Potion>? _StandardPotions;
-        public List<Potion> StandardPotions { get { return _StandardPotions; } set => _StandardPotions = value; }
-
-        private List<Ball>?  _Pokeballs;
-        public List<Ball> Pokeballs { get { return _Pokeballs; } set => _Pokeballs = value; }
+        private List<Item>? _Items;
+        public List<Item> Items { get => _Items; set => _Items = value; }
     }
 }
