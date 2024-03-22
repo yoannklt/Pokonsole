@@ -15,6 +15,7 @@ namespace Pokonsole.Source.Mapping
         PLAYER,
         POKEMON,
         WALL,
+        WATER,
         TOTAL_TILE_TYPE
     }
 
@@ -24,37 +25,51 @@ namespace Pokonsole.Source.Mapping
 
         public string GetString()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             switch (Type)
             {
                 case TileType.BUSH:
-                    return "B";
+                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    return " ";
 
                 case TileType.POKEMON:
-                    return "P";
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    return " ";
 
                 case TileType.EMPTY:
-                    return ".";
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    return " ";
 
                 case TileType.WALL:
-                    return "|";
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    return " ";
 
                 case TileType.TREE:
-                    return "T";
+                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    return " ";
 
                 case TileType.ENEMY:
-                    return "E";
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    return " ";
 
                 case TileType.PLAYER:
-                    return "P";
+                    Console.BackgroundColor = ConsoleColor.DarkYellow;
+                    return " ";
 
                 case TileType.ITEM:
-                    return "O";
+                    Console.BackgroundColor = ConsoleColor.DarkMagenta;
+                    return " ";
 
                 case TileType.HORIZONTAL_WALL:
-                    return "_";
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    return " ";
+
+                case TileType.WATER:
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    return " ";
 
                 default:
-                    return " ";
+                    return "";
             }
         }
 

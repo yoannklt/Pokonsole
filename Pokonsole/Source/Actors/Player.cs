@@ -11,6 +11,7 @@ namespace Pokonsole.Source.Actors.Player
 
         public override string Interact()
         {
+            Console.BackgroundColor = ConsoleColor.Black;
             TileType FacingTile = Map.Tile[Position.X + Direction.X, Position.Y + Direction.Y].TileType; 
             Console.Write("                                   ");
             Console.SetCursorPosition(0, Map.Size.Y + 3);
@@ -18,7 +19,7 @@ namespace Pokonsole.Source.Actors.Player
             switch (FacingTile)
             {
                 case TileType.EMPTY:
-                    return "There is nothing there";
+                    return "";
 
                 case TileType.WALL:
                     return "What a cool wall!";
@@ -31,6 +32,9 @@ namespace Pokonsole.Source.Actors.Player
 
                 case TileType.ITEM:
                     return "Object collected: ";
+
+                case TileType.WATER:
+                    return "Wotah";
 
                 default:
                     return "";

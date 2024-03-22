@@ -60,7 +60,7 @@ namespace Pokonsole.Source.Mapping
                     return TileType.WALL;
 
                 case '6':
-                    return TileType.ANGULAR_WALL;
+                    return TileType.WATER;
 
                 default : return TileType.EMPTY;
             }
@@ -94,13 +94,14 @@ namespace Pokonsole.Source.Mapping
                     if (Tile[j, i].TileType != TileType.EMPTY) 
                     {
                         Console.SetCursorPosition(j * 2, i);
+                        Console.BackgroundColor = ConsoleColor.DarkGray;
                         Console.Write(Tile[j, i].GetString());
-                        Console.SetCursorPosition(0, Size.Y + 1);
                     }
                     else
                     {
                         Console.SetCursorPosition(j * 2, i);
-                        Console.Write(".");
+                        Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.Write(" ");
                     }
                 }
             }
