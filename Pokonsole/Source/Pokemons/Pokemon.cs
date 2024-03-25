@@ -28,14 +28,14 @@ namespace Pokonsole.Source.Pokemons
     //CONSTRUCTEUR 
     internal class Pokemon
     {
-        public Pokemon()
+        public Pokemon(string name, int pv)
         {
-            _Name = "";
+            _Name = name;
             _Type = POKEMON_TYPE.NORMAL;
             _Status = POKEMON_STATUS.NORMAL;
-            _Hp = 0;
+            _Hp = pv;
             _Level = 0;
-            _Attack = 0;
+            _Attack = 10;
             _Defense = 0;
             _Speed = 0;
             _SpecialAttack = 0;
@@ -45,6 +45,7 @@ namespace Pokonsole.Source.Pokemons
             _IsWild = false;
             _isKnockOut = false;
         }
+
 
         //METHODES 
         public void AddCapacity(string capacityName)
@@ -94,7 +95,17 @@ namespace Pokonsole.Source.Pokemons
 
         }
 
-        public void onCombatVictory() { }
+        public void onCombatVictory() 
+        {
+            if (_IsWild == true)
+            {
+                Console.WriteLine("The wild " + _Name + " won the combat !");
+            }
+            else
+            {
+                Console.WriteLine(_Name + " won the combat !");
+            }
+        }
 
         public void onCapture() { }
 
@@ -121,6 +132,19 @@ namespace Pokonsole.Source.Pokemons
                 {
                     target._isKnockOut = true;
                 }
+            }
+        }
+
+        public string GetCapacity(int index)
+        {
+            if (index >= 0 && index < _CapacityList.Count)
+            {
+                return _CapacityList[index];
+            }
+            else
+            {
+                Console.WriteLine("Index out of range.");
+                return null;
             }
         }
 

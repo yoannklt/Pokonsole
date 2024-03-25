@@ -48,22 +48,31 @@
         }
         public void CapacityDamage(Pokemon target)
         {
-            var rand = new Random();
-            if (Accuracy == 100)
+            
+            if (AttackMissed == false)
             {
-                Console.WriteLine("Attack 1");
                 target.Hp = target.Hp - Power;
-                Console.WriteLine(target.Hp);
-
-            }
-            else if (rand.Next(0, 101) <= Accuracy)
-            {
-                Console.WriteLine("Attack 2");
-                target.Hp = target.Hp - Power;
-                Console.WriteLine(target.Hp);
             }
             else
             {
+                return;
+            }
+        }
+
+        public void IsAttackMissed()
+        {
+            var rand = new Random();
+            if (Accuracy == 100)
+            {
+                AttackMissed = false;
+            }
+            if (rand.Next(0, 101)<= Accuracy)
+            {
+                AttackMissed = false;
+            }
+            else 
+            { 
+                AttackMissed = true;
                 Console.WriteLine("Attack missed");
             }
         }
@@ -74,6 +83,7 @@
         public int Power { get => _power; set => _power = value; }
         public int Accuracy { get => _accuracy; set => _accuracy = value; }
         public POKEMON_STATUS Status {get => _status; set => _status = value; }
+        public bool AttackMissed { get => _attackMissed; set=> _attackMissed = value; }
 
         //VARIABLES PRIVEES
         private string _name;
@@ -81,6 +91,7 @@
         private int _power;
         private int _accuracy;
         private POKEMON_STATUS _status;
+        private bool _attackMissed = false;
     }
 }
 
