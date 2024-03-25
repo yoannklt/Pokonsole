@@ -1,6 +1,8 @@
 ﻿using Pokonsole.Source.Pokemon;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using System.Collections.Generic;
+
 
 namespace Pokonsole.Source.Pokemon
 {
@@ -17,16 +19,17 @@ namespace Pokonsole.Source.Pokemon
             ListAllPokemons.Add(Name);
         }
 
-        //public void readJsonPokemons()
-        //{
-        //    string jsonString = System.IO.File.ReadAllText("../../../Source/Data/PokemonList.json");
-        //    ListAllPokemons = JsonSerializer.Deserialize<List<Pokemon>>(jsonString);
-        //}
-
-        public void saveAllPokemons()
+        public void saveJsonPokemons()
         {
             string jsonString = JsonSerializer.Serialize(ListAllPokemons);
             System.IO.File.WriteAllText("../../../Source/Data/PokemonList.json", jsonString);
+        }
+
+        public void loadJsonPokemons()
+        {
+            string jsonString1 = System.IO.File.ReadAllText("../../../Source/Data/PokemonList.json");
+            ListAllPokemons = JsonSerializer.Deserialize<List<Pokemon>>(jsonString1);
+
         }
 
 

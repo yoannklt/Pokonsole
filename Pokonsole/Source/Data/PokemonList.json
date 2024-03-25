@@ -1,1 +1,36 @@
-[{"_Name":"Arcanin","_Type":1,"_Status":0,"Hp":50,"Level":100,"Attack":60,"Defense":60,"Speed":100,"SpecialAttack":100,"SpecialDefense":100,"Accuracy":100,"IsWild":true,"IsKnockOut":false,"IsInCombat":false,"IsMyTurn":false},{"_Name":"Salam\u00E8che","_Type":1,"_Status":0,"Hp":50,"Level":100,"Attack":60,"Defense":60,"Speed":100,"SpecialAttack":100,"SpecialDefense":100,"Accuracy":100,"IsWild":true,"IsKnockOut":false,"IsInCombat":false,"IsMyTurn":false},{"_Name":"Salampas\u00E8che","_Type":1,"_Status":0,"Hp":50,"Level":100,"Attack":60,"Defense":60,"Speed":100,"SpecialAttack":100,"SpecialDefense":100,"Accuracy":100,"IsWild":true,"IsKnockOut":false,"IsInCombat":false,"IsMyTurn":false}]
+[
+  {
+    "_Name": "Arcanin",
+    "_Type": 1,
+    "_Status": 0,
+    "Hp": 50,
+    "Level": 100,
+    "Attack": 60,
+    "Defense": 60,
+    "Speed": 100,
+    "SpecialAttack": 100,
+    "SpecialDefense": 100,
+    "Accuracy": 100,
+    "IsWild": true,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false
+  },
+  {
+    "_Name": "Charmander",
+    "_Type": 1,
+    "_Status": 0,
+    "Hp": 50,
+    "Level": 100,
+    "Attack": 60,
+    "Defense": 60,
+    "Speed": 100,
+    "SpecialAttack": 100,
+    "SpecialDefense": 100,
+    "Accuracy": 100,
+    "IsWild": true,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false
+  }
+]

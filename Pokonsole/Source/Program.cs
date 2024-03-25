@@ -10,11 +10,10 @@ public class Program
     {
         GameManager game = new GameManager();
         PokemonManager pokemonManager = new PokemonManager();
-        //pokemonManager.readJsonPokemons();
         pokemonManager.createNewPokemon("Arcanin", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
-        pokemonManager.createNewPokemon("Salamèche", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
-        pokemonManager.createNewPokemon("Salampasèche", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
-        pokemonManager.saveAllPokemons();
+        pokemonManager.createNewPokemon("Charmander", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
+        //pokemonManager.saveJsonPokemons();
+        pokemonManager.loadJsonPokemons();
         Console.WriteLine(pokemonManager.ListAllPokemons[0]._Name);
 
         /* while (game._Running)
