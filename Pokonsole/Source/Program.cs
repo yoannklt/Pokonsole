@@ -1,6 +1,7 @@
 ﻿using Pokonsole.Source.Core;
 using Pokonsole.Source.Map;
 using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Systems;
 using System.Xml.Linq;
 
 public class Program
@@ -14,6 +15,7 @@ public class Program
 
         //game.Draw();
         Pokemon pokemon1 = new Pokemon();
+        Pokemon pokemon2 = new Pokemon();
         //Capacity firstCapa = new Capacity("Charge", POKEMON_TYPE.NORMAL, 1, 100);
         Capacity firstCapa = new Capacity("Poison", POKEMON_TYPE.POISON, 35, 50, POKEMON_STATUS.POISONED);
         Console.WriteLine(firstCapa.Name);
@@ -26,6 +28,8 @@ public class Program
         capaManager.addDico("Danse Lame", Capa1);
         Console.WriteLine(capaManager.Capacitys["Danse Lame"].Name);
         firstCapa.CapacityDamage(pokemon1);
+        CombatSystem combatSystem = new CombatSystem();
+        combatSystem.CreateNewCombat(pokemon1, pokemon2);
 
         while (game._Running)
         {

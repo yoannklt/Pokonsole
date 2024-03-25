@@ -139,6 +139,7 @@ namespace Pokonsole.Source.Pokemons
         public int Accuracy { get => _Accuracy; set => _Accuracy = value; }
         public bool IsWild { get => _IsWild; set => _IsWild = value; }
         public bool IsKnockOut { get => _isKnockOut; set => _isKnockOut = value; }
+        public bool IsInCombat { get => _isInCombat; set => _isInCombat = value; }
 
         //VARIABLE PRIVEES
         private List<string> _CapacityList;
@@ -152,5 +153,6 @@ namespace Pokonsole.Source.Pokemons
         private int _Accuracy;
         private bool _IsWild;
         private bool _isKnockOut;
+        private bool _isInCombat = false;
     }
 }
