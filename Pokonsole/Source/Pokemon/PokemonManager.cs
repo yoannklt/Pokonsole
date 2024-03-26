@@ -1,42 +1,49 @@
-﻿using Pokonsole.Source.Pokemon;
-using System.Text.Json;
-using System.Text.Json.Nodes;
+﻿using System;
 using System.Collections.Generic;
-
 
 namespace Pokonsole.Source.Pokemon
 {
     internal class PokemonManager
     {
+        private PokemonParser parser;
+
         public PokemonManager()
         {
+            parser = new PokemonParser();
             ListAllPokemons = new List<Pokemon>();
         }
 
-        public void createNewPokemon(string name, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, int accuracy)
+        public void CreateNewPokemon(string pokemonName, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, int accuracy)
         {
-            Pokemon Name = new Pokemon(name, type, hp, level, attack, defense, speed, specialAttack, specialDefense, accuracy);
-            ListAllPokemons.Add(Name);
+            Pokemon newPokemon = new Pokemon(pokemonName, type, hp, level, attack, defense, speed, specialAttack, specialDefense, accuracy);
+            ListAllPokemons.Add(newPokemon);
         }
 
-        public void saveJsonPokemons()
+        public void RemovePokemon(string pokemonName)
         {
-            string jsonString = JsonSerializer.Serialize(ListAllPokemons);
-            System.IO.File.WriteAllText("../../../Source/Data/PokemonList.json", jsonString);
+            Pokemon pokemonToRemove = ListAllPokemons.Find(p => p.Name == pokemonName);
+
+            if (pokemonToRemove != null)
+            {
+                ListAllPokemons.Remove(pokemonToRemove);
+                //Console.WriteLine($"Pokemon '{pokemonName}' removed successfully.");
+            }
+            else
+            {
+                //Console.WriteLine($"Pokemon '{pokemonName}' not found.");
+            }
         }
 
-        public void loadJsonPokemons()
+        public void SavePokemons()
         {
-            string jsonString1 = System.IO.File.ReadAllText("../../../Source/Data/PokemonList.json");
-            ListAllPokemons = JsonSerializer.Deserialize<List<Pokemon>>(jsonString1);
-
+            parser.SavePokemons(ListAllPokemons);
         }
 
+        public void LoadPokemons()
+        {
+            ListAllPokemons = parser.LoadPokemons();
+        }
 
-        //METHODES GETTER / SETTER
-        public List<Pokemon> ListAllPokemons { get => _listAllPokemons; set => _listAllPokemons = value; }
-        //VARIABLES PRIVEES
-        private List<Pokemon> _listAllPokemons;
-
+        public List<Pokemon> ListAllPokemons { get; set; }
     }
 }

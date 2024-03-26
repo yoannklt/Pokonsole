@@ -37,7 +37,7 @@ namespace Pokonsole.Source.Pokemon
         }
         public void ApplyStatus(Pokemon target)
         {
-            target._Status = Status;
+            target.Status = Status;
         }
         //METHODES GETTER / SETTER
         public string Name { get => _name; set => _name = value; }

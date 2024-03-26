@@ -31,16 +31,17 @@ namespace Pokonsole.Source.Pokemon
     {
         public Pokemon(string name, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, int accuracy)
         {
-            _Name = name;
-            _Type = type;
-            _Hp = hp;
-            _Level = level;
-            _Attack = attack;
-            _Defense = defense;
-            _Speed = speed;
-            _SpecialAttack = specialAttack;
-            _SpecialDefense = specialDefense;
-            _Accuracy = accuracy;
+            Name = name;
+            Type = type;
+            Hp = hp;
+            Level = level;
+            Attack = attack;
+            Defense = defense;
+            Speed = speed;
+            SpecialAttack = specialAttack;
+            SpecialDefense = specialDefense;
+            Accuracy = accuracy;
+            Status = POKEMON_STATUS.NORMAL;
             _IsWild = true;
             _IsKnockOut = false;
             _IsInCombat = false;
@@ -73,11 +74,11 @@ namespace Pokonsole.Source.Pokemon
         public void onCombatEnter() { 
             if (_IsWild == true)
             {
-                Console.WriteLine("A wild " + _Name + " appeared !");
+                Console.WriteLine("A wild " + Name + " appeared !");
             }
             else
             {
-                Console.WriteLine(_Name + " is ready to fight !");
+                Console.WriteLine(Name + " is ready to fight !");
             }
         }
         /// onCombatDefeate()
@@ -85,11 +86,11 @@ namespace Pokonsole.Source.Pokemon
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + _Name + " fainted !");
+                Console.WriteLine("The wild " + Name + " fainted !");
             }
             else
             {
-                Console.WriteLine(_Name + " fainted !");
+                Console.WriteLine(Name + " fainted !");
             }
         }
         /// onCombatExit()
@@ -97,7 +98,7 @@ namespace Pokonsole.Source.Pokemon
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + _Name + " ran away !");
+                Console.WriteLine("The wild " + Name + " ran away !");
             }
             else
             {
@@ -112,7 +113,7 @@ namespace Pokonsole.Source.Pokemon
                 target.Hp = target.Hp - capacity.Power;
                 if (capacity.Status != POKEMON_STATUS.NORMAL)
                 {
-                    target._Status = capacity.Status;
+                    target.Status = capacity.Status;
                 }
                 Console.WriteLine(target.Hp);
 
@@ -123,7 +124,7 @@ namespace Pokonsole.Source.Pokemon
                 target.Hp = target.Hp - capacity.Power;
                 if (capacity.Status != POKEMON_STATUS.NORMAL)
                 {
-                    target._Status = capacity.Status;
+                    target.Status = capacity.Status;
                 }
                 Console.WriteLine(target.Hp);
             }
@@ -138,9 +139,9 @@ namespace Pokonsole.Source.Pokemon
         /// onUseItem()
 
         //METHODES GETTERS / SETTERS
-        public string _Name { get; set; }
-        public POKEMON_TYPE _Type { get; set; }
-        public POKEMON_STATUS _Status { get; set; }
+        public string Name { get; set; }
+        public POKEMON_TYPE Type { get; set; }
+        public POKEMON_STATUS Status { get; set; }
 
         public int Hp { get => _Hp; set => _Hp = value; }
         public int Level { get => _Level; set => _Level = value; }

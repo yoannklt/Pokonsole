@@ -10,20 +10,13 @@ public class Program
     {
         GameManager game = new GameManager();
         PokemonManager pokemonManager = new PokemonManager();
-        pokemonManager.createNewPokemon("Arcanin", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
-        pokemonManager.createNewPokemon("Charmander", POKEMON_TYPE.FIRE, 50, 100, 60, 60, 100, 100, 100, 100);
-        //pokemonManager.saveJsonPokemons();
-        pokemonManager.loadJsonPokemons();
-        Console.WriteLine(pokemonManager.ListAllPokemons[0]._Name);
 
-        /* while (game._Running)
-         {
-             game.HandleEvent();
-             game.Update();
-             game.Draw();   
-         }*/
+        pokemonManager.CreateNewPokemon("Squirtel", POKEMON_TYPE.WATER, 35, 1, 55, 40, 90, 50, 50, 120);
+        pokemonManager.SavePokemons();
+        Console.WriteLine(pokemonManager.ListAllPokemons[0].Name);
         game.Quit();
     }
-    
+
+
     // VARIABLES MEMBRES
 }
