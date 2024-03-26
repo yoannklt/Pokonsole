@@ -32,8 +32,30 @@ namespace Pokonsole.Source.Systems
                         string input = Console.ReadLine();
                         switch (input)
                         {
-                            case "1":
+                            case "1": //attaquer
                                 // Si le joueur choisit d'attaquer, exécutez l'attaque
+                                Console.WriteLine("Choisissez une attaque : ");
+                                
+                                //pokemon1.GetAllCapacities
+                                string inputAttack = Console.ReadLine();
+                                switch (inputAttack)
+                                {
+                                    case "1":
+                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée
+                                        break;
+                                    case "2":
+                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        break;
+                                    case "3":
+                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        break;
+                                    case "4":
+                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        break;
+                                    default: 
+                                        Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
+                                        break;
+                                }
                                 break;
                             case "2":
                                 // Si le joueur choisit d'utiliser un objet, exécutez l'utilisation de l'objet
@@ -47,7 +69,26 @@ namespace Pokonsole.Source.Systems
                     }
                     else
                     {
-                        Console.WriteLine("Player 2's turn :");
+                        Console.WriteLine("IA turn :");
+                        if (pokemon2.IsWild == false)
+                        {
+                            var randomIAMove = new Random();
+                            randomIAMove.Next(1, 4);
+                            //random attack
+                        }
+                        else 
+                        {
+                            var randomIAMove = new Random();
+                            if(randomIAMove.Next(0,100) >= 90) 
+                            {
+                                //random attack
+                            }
+                            else
+                            {
+                                //Fuite du pokémon
+                                pokemon2.onCombatExit();
+                            }
+                        }
                     }
                     isPlayerTurn = !isPlayerTurn;
                 }
