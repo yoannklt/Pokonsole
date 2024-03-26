@@ -15,6 +15,15 @@ namespace Pokonsole.Source.Pokemon
         GRASS,
         POISON,
         FLYING,
+        BUG,
+        ELECTRIC,
+        GROUND,
+        ROCK,
+        FIGHTING,
+        PSYCHIC,
+        GHOST,
+        ICE,
+        DRAGON,
         TOTAL_POKEMON_TYPE
     }
 
@@ -133,8 +142,13 @@ namespace Pokonsole.Source.Pokemon
                 Console.WriteLine("Attack missed ");
             }
         }
+        public void GetAllCapacity()
+        {
+            foreach (var capacity in _CapacityList)
+            {
+            }
+        }   
         /// onCombatVictory()
-        /// ???? isMyCombatTurn()
         /// onCapture()
         /// onUseItem()
 
@@ -155,6 +169,7 @@ namespace Pokonsole.Source.Pokemon
         public bool IsKnockOut { get => _IsKnockOut; set => _IsKnockOut = value; }
         public bool IsInCombat { get => _IsInCombat; set => _IsInCombat = value; }
         public bool IsMyTurn { get => _IsMyTurn; set => _IsMyTurn = value; }
+        public List<string> CapacityList { get => _CapacityList; set => _CapacityList = value; }
 
 
         //VARIABLE PRIVEES

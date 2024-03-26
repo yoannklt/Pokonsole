@@ -1,1 +1,19 @@
-[{"Name":"Squirtel","Type":2,"Status":0,"Hp":35,"Level":1,"Attack":55,"Defense":40,"Speed":90,"SpecialAttack":50,"SpecialDefense":50,"Accuracy":120,"IsWild":true,"IsKnockOut":false,"IsInCombat":false,"IsMyTurn":false}]
+[
+  {
+    "Name": "Squirtel",
+    "Type": 2,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 120,
+    "IsWild": true,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false
+  }
+]
