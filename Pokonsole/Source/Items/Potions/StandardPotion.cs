@@ -11,8 +11,8 @@ namespace Pokonsole.Source.Items.Potions
 
         public override void Use()
         {
-            if (Pokemon.Health > 0)
-                Pokemon.Health += HealthRegeneration;
+            if (Pokemon.Hp > 0)
+                Pokemon.Hp += (int)HealthRegeneration;
         }
     }
 }

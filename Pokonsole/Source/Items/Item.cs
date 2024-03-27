@@ -18,7 +18,7 @@ namespace Pokonsole.Source.Items
         public Item() 
         {
             ItemData = new ITEM_DATA();
-            Pokemon = new Pokemon();
+            //Pokemon = new Pokemon();
         }
 
         public void SetTarget(ref Pokemon pokemon)

@@ -4,16 +4,23 @@ using Pokonsole.Source.Actors.Player;
 using Pokonsole.Source.Accessories;
 using Pokonsole.Source.Items.Potions;
 using Pokonsole.Source.Items.Balls;
+using Pokonsole.Source.Pokemons;
 
 namespace Pokonsole.Source.Core
 {
     internal class GameManager
     {
+
+        PokemonManager _pokemonManager;
         // CONSTRUCTOR
         public GameManager() 
         {
+            _pokemonManager = new PokemonManager();
+            _pokemonManager.LoadPokemons();
+            //Console.WriteLine(pokemonManager.ListAllPokemons[0].Name);
+
             Map = new Map(20, 20);
-            Player = new Player(ref rMap);
+            Player = new Player(ref rMap, _pokemonManager);
             Inventory = new Inventory();
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new StandardPotion());

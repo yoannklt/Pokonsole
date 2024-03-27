@@ -1,12 +1,15 @@
 ﻿using Pokonsole.Source.Mapping;
+using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Systems;
 
 namespace Pokonsole.Source.Actors.Player
 {
     internal class Player : Actor
     {
-        public Player(ref Map map) : base(ref map)
+        PokemonManager _pkmnManager;
+        public Player(ref Map map, PokemonManager pkmnManager) : base(ref map)
         { 
-        
+            _pkmnManager = pkmnManager;
         }
 
         public override string Interact()
@@ -28,8 +31,10 @@ namespace Pokonsole.Source.Actors.Player
                     return "Wsh groot";
 
                 case TileType.ENEMY:
-                    return "AKHAAAAAAAAAAA!!";
-
+                    CombatSystem combatSystem = new CombatSystem();
+                    var random = new Random();
+                    combatSystem.CreateNewCombat(_pkmnManager.ListAllPokemons[0], _pkmnManager.ListAllPokemons[random.Next(0, _pkmnManager.ListAllPokemons.Count)]) ;
+                    return "";
                 case TileType.ITEM:
                     return "Object collected: ";
 
