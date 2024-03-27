@@ -56,7 +56,6 @@ namespace Pokonsole.Source.Core
         public bool _Running = true;
 
         // CLASSES
-        public GameState.GameState _GameState = new MenuState();
         public Player.Player _Player = new();
         private Pokemon.PokemonManager _PokemonManager = new();
         public Map.Map _Map = new(20);

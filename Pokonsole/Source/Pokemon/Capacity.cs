@@ -24,27 +24,27 @@
         //METHODES
         public void AttackBuff(Pokemon target)
         {
-            target.Attack1 = target.Attack1 + Power;
+            //target.Attack1 = target.Attack1 + Power;
         }
         public void DefenseBuff(Pokemon target)
         {
-            target.Defense = target.Defense + Power;
+            //target.Defense = target.Defense + Power;
         }
         public void AttackSpeBuff(Pokemon target)
         {
-            target.AttackSpe = target.AttackSpe + Power;
+            //target.AttackSpe = target.AttackSpe + Power;
         }
         public void DefenseSpeBuff(Pokemon target)
         {
-            target.DefenseSpe = target.DefenseSpe + Power;
+            //target.DefenseSpe = target.DefenseSpe + Power;
         }
         public void SpeedBuff(Pokemon target)
         {
-            target.Speed = target.Speed + Power;
+            //target.Speed = target.Speed + Power;
         }
         public void ApplyStatus(Pokemon target)
         {
-            target.State = Status;
+            //target.State = Status;
         }
 
         //METHODES GETTER / SETTER

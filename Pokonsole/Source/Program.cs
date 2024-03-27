@@ -14,7 +14,7 @@ public class Program
         game._Map.LoadMap();
         game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
 
-        game._Map.Draw();
+        //game._Map.Draw();
 
         while(game._Running)
         {
@@ -24,11 +24,16 @@ public class Program
             
             cm.addDico("Danse Lame", DanseLame);
 
- 
 
-            game.HandleEvent();
-            game.Update();
-            // game.Draw();   
+
+            //game.HandleEvent();
+            //game.Update();
+            //game.Draw();
+
+
+            GameState State = new();
+            State.GameStateCheck();
+
         }
         game.Quit();
     }
