@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Pokonsole.Source.Pokemons;
 
-namespace Pokonsole.Source.Pokemon
+namespace Pokonsole.Source.Pokemons
 {
     internal class PokemonManager
     {

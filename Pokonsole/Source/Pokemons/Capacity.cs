@@ -1,6 +1,8 @@
-﻿using Pokonsole.Source.Pokemon;
+﻿using Pokonsole.Source.Pokemons;
 
-namespace Pokonsole.Source.Pokemon
+
+﻿namespace Pokonsole.Source.Pokemons
+
 {
     internal class Capacity
     {
@@ -37,7 +39,7 @@ namespace Pokonsole.Source.Pokemon
         }
         public void ApplyStatus(Pokemon target)
         {
-            target._Status = Status;
+            target.Status = Status;
         }
         public void CapacityDamage(Pokemon target)
         {
@@ -74,7 +76,8 @@ namespace Pokonsole.Source.Pokemon
         public POKEMON_TYPE Type { get => _type; set => _type = value; }
         public int Power { get => _power; set => _power = value; }
         public int Accuracy { get => _accuracy; set => _accuracy = value; }
-        public POKEMON_STATUS Status {get => _status; set => _status = value; }
+        public POKEMON_STATUS Status { get => _status; set => _status = value; }
+        public int PowerPerRound { get => _powerPerRound; set => _powerPerRound = Power / 3; }
         public bool AttackMissed { get => _attackMissed; set=> _attackMissed = value; }
 
         //VARIABLES PRIVEES
@@ -83,14 +86,7 @@ namespace Pokonsole.Source.Pokemon
         private int _power;
         private int _accuracy;
         private POKEMON_STATUS _status;
+        private int _powerPerRound;
         private bool _attackMissed = false;
     }
 }
-
-
-/// Name : Charge   | Danse Lames } Buff l'attaque du lanceur de Power % et avec un taux de réusite de Accuracy %   | Poison } Effectue Power% de dégat sur 3 tours
-/// Type : Normal   | Normal                                                                                        | Poison 
-/// Power : 40      | -- (20)                                                                                       | 50
-/// Accuracy : 100  | -- (100)                                                                                      | 100
-///                                                                                                                 | STATUS : POISONED
-///                                                                                                                 

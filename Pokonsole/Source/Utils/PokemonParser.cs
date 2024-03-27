@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-namespace Pokonsole.Source.Pokemon
+namespace Pokonsole.Source.Pokemons
 {
     internal class PokemonParser
     {

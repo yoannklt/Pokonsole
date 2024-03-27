@@ -15,11 +15,18 @@ public class Program
         //game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
 
         //game.Draw();
-        Pokemon pokemon1 = new Pokemon("Salamèche", 100);
-        Pokemon pokemon2 = new Pokemon("Carapuce", 100);
-        Capacity secondCapa = new Capacity("Charge", POKEMON_TYPE.NORMAL, 1, 100);
+        Pokemon pokemon1 = new Pokemon("Pikachu", POKEMON_TYPE.ELECTRIC, 100, 5, 50, 50, 50, 50, 50);
+        Pokemon pokemon2 = new Pokemon("Bulbizarre", POKEMON_TYPE.GRASS, 100, 5, 50, 50, 50, 50, 50);
+        Capacity secondCapa = new Capacity("Charge", POKEMON_TYPE.NORMAL, 10, 100);
         Capacity firstCapa = new Capacity("Poison", POKEMON_TYPE.POISON, 35, 50, POKEMON_STATUS.POISONED);
         Capacity thirdCapa = new Capacity("nomDefenseBuff", POKEMON_TYPE.NORMAL, 35, 50);
+        pokemon1.AddCapacity(firstCapa);
+        pokemon1.AddCapacity(secondCapa);
+        pokemon1.AddCapacity(thirdCapa);
+        pokemon2.AddCapacity(firstCapa);
+        pokemon2.AddCapacity(secondCapa);
+        pokemon2.AddCapacity(thirdCapa);
+        pokemon2.AddCapacity(thirdCapa);
 
         //Console.WriteLine(firstCapa.Name);
         //Console.WriteLine(firstCapa.Type);
@@ -45,8 +52,8 @@ public class Program
         }
         //pokemonManager.CreateNewPokemon("Pikachu", POKEMON_TYPE.ELECTRIC, 35, 1, 55, 40, 90, 50, 50);
         //pokemonManager.SavePokemons();
-        pokemonManager.LoadPokemons();
-        Console.WriteLine(pokemonManager.ListAllPokemons[0].Name);
+        //pokemonManager.LoadPokemons();
+        //Console.WriteLine(pokemonManager.ListAllPokemons[0].Name);
         game.Quit();
     }
 

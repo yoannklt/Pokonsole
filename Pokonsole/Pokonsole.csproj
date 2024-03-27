@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Source\BattleSystem\" />
+    <Folder Include="Source\Pokemon\" />
   </ItemGroup>
 
 </Project>
