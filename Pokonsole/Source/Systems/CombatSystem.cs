@@ -22,7 +22,11 @@ namespace Pokonsole.Source.Systems
                 //Gestion de la boucle principale du combat
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
-                    if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) { break; }
+                    if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
+                    { 
+                        if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
+                        if (pokemon2.Hp <= 0) { pokemon2.IsKnockOut = true; }
+                    }
 
                     if (isPlayerTurn)
                     {
