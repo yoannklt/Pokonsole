@@ -28,13 +28,20 @@ public class Program
         CapacityManager capaManager = new CapacityManager();
         Capacity Capa1 = capaManager.createNewCapacity("Danse Lame", POKEMON_TYPE.NORMAL, 20, 100);
         capaManager.addDico("Danse Lame", Capa1);
+        pokemon1.AddCapacity(firstCapa);
+        pokemon1.AddCapacity(secondCapa);
+        //pokemon1.AddCapacity(Capa1);
+        //pokemon1.AddCapacity(thirdCapa);
+        //pokemon1.AddCapacity("Charge");
+        //pokemon1.AddCapacity("Flamèche");
+        //pokemon1.AddCapacity("Vive attaque");
         //Console.WriteLine(capaManager.Capacitys["Danse Lame"].Name);
         /*firstCapa.CapacityDamage(pokemon1);*/
         CombatSystem combatSystem = new CombatSystem();
         combatSystem.CreateNewCombat(pokemon1, pokemon2);
-        combatSystem.UseAbility(pokemon1, pokemon2, firstCapa);
-        combatSystem.UseAbility(pokemon2, pokemon2, Capa1);
-        combatSystem.UseAbility(pokemon1, pokemon1, firstCapa);
+        //combatSystem.UseAbility(pokemon1, pokemon2, firstCapa);
+        //combatSystem.UseAbility(pokemon2, pokemon2, capaManager.Capacitys["Danse Lame"]);
+        //combatSystem.UseAbility(pokemon1, pokemon1, firstCapa);
 
         while (game._Running)
         {

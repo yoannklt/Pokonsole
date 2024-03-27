@@ -28,31 +28,31 @@ namespace Pokonsole.Source.Pokemons
     //CONSTRUCTEUR 
     internal class Pokemon
     {
-        public Pokemon(string name, int pv)
+        public Pokemon(string name, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, bool isWild = false)
         {
-            _Name = name;
-            _Type = POKEMON_TYPE.NORMAL;
-            _Status = POKEMON_STATUS.NORMAL;
-            _Hp = pv;
-            _Level = 0;
-            _Attack = 10;
-            _Defense = 0;
-            _Speed = 0;
-            _SpecialAttack = 0;
-            _SpecialDefense = 0;
-            _Accuracy = 100;
-            _CapacityList = new List<string>();
-            _IsWild = false;
-            _isKnockOut = false;
+            Name = name;
+            Type = POKEMON_TYPE.NORMAL;
+            Status = POKEMON_STATUS.NORMAL;
+            Hp = hp;
+            Level = level;
+            Attack = attack;
+            Defense = defense;
+            Speed = speed;
+            SpecialAttack = specialAttack;
+            SpecialDefense = specialDefense;
+            Accuracy = 100;
+            CapacityList = new List<Capacity>();
+            IsWild = isWild;
+            IsKnockOut = false;
         }
 
 
         //METHODES 
-        public void AddCapacity(string capacityName)
+        public void AddCapacity(Capacity capacityName)
         {
             _CapacityList.Add(capacityName);
         }
-        public void RemoveCapacity(string capacityName)
+        public void RemoveCapacity(Capacity capacityName)
         {
             _CapacityList.Remove(capacityName);
         }
@@ -60,22 +60,22 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("A wild " + _Name + " appeared !");
+                Console.WriteLine("A wild " + Name + " appeared !");
             }
             else
             {
-                Console.WriteLine(_Name + " is ready to fight !");
+                Console.WriteLine(Name + " is ready to fight !");
             }
         }
         public void onCombatDefeate()
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + _Name + " fainted !");
+                Console.WriteLine("The wild " + Name + " fainted !");
             }
             else
             {
-                Console.WriteLine(_Name + " fainted !");
+                Console.WriteLine(Name + " fainted !");
             }
         }
 
@@ -83,7 +83,7 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + _Name + " ran away !");
+                Console.WriteLine("The wild " + Name + " ran away !");
             }
             else
             {
@@ -99,11 +99,11 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + _Name + " won the combat !");
+                Console.WriteLine("The wild " + Name + " won the combat !");
             }
             else
             {
-                Console.WriteLine(_Name + " won the combat !");
+                Console.WriteLine(Name + " won the combat !");
             }
         }
 
@@ -135,7 +135,7 @@ namespace Pokonsole.Source.Pokemons
             }
         }
 
-        public string GetCapacity(int index)
+        public Capacity GetCapacity(int index)
         {
             if (index >= 0 && index < _CapacityList.Count)
             {
@@ -149,9 +149,9 @@ namespace Pokonsole.Source.Pokemons
         }
 
         //METHODES GETTERS / SETTERS
-        public string _Name { get; set; }
-        public POKEMON_TYPE _Type { get; set; }
-        public POKEMON_STATUS _Status { get; set; }
+        public string Name { get; set; }
+        public POKEMON_TYPE Type { get; set; }
+        public POKEMON_STATUS Status { get; set; }
 
         public int Hp { get => _Hp; set => _Hp = value; }
         public int Level { get => _Level; set => _Level = value; }
@@ -164,9 +164,10 @@ namespace Pokonsole.Source.Pokemons
         public bool IsWild { get => _IsWild; set => _IsWild = value; }
         public bool IsKnockOut { get => _isKnockOut; set => _isKnockOut = value; }
         public bool IsInCombat { get => _isInCombat; set => _isInCombat = value; }
+        public List<Capacity> CapacityList { get => _CapacityList; set => _CapacityList = value; }
 
         //VARIABLE PRIVEES
-        private List<string> _CapacityList;
+        private List<Capacity> _CapacityList;
         private int _Hp;
         private int _Level;
         private int _Attack;

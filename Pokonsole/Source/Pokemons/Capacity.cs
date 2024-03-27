@@ -44,7 +44,7 @@
         }
         public void ApplyStatus(Pokemon target)
         {
-            target._Status = Status;
+            target.Status = Status;
         }
         public void CapacityDamage(Pokemon target)
         {
