@@ -29,7 +29,7 @@ namespace Pokonsole.Source.Mapping
             switch (Type)
             {
                 case TileType.BUSH:
-                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    Console.BackgroundColor = ConsoleColor.Green;
                     return " ";
 
                 case TileType.POKEMON:
@@ -37,23 +37,23 @@ namespace Pokonsole.Source.Mapping
                     return " ";
 
                 case TileType.EMPTY:
-                    Console.BackgroundColor = ConsoleColor.DarkGray;
-                    return " ";
-
-                case TileType.WALL:
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    return " ";
-
-                case TileType.TREE:
                     Console.BackgroundColor = ConsoleColor.DarkGreen;
                     return " ";
 
-                case TileType.ENEMY:
+                case TileType.WALL:
                     Console.BackgroundColor = ConsoleColor.DarkRed;
                     return " ";
 
+                case TileType.TREE:
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    return " ";
+
+                case TileType.ENEMY:
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    return " ";
+
                 case TileType.PLAYER:
-                    Console.BackgroundColor = ConsoleColor.DarkYellow;
+                    Console.BackgroundColor = ConsoleColor.Yellow;
                     return " ";
 
                 case TileType.ITEM:

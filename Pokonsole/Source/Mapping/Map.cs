@@ -78,7 +78,12 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    Console.Write(Tile[j, i].GetString() + " ");
+                    if (Tile[i, j].TileType == TileType.PLAYER) 
+                    {
+                        Console.Write(Tile[j, i].GetString());
+                    }
+                    else 
+                        Console.Write(Tile[j, i].GetString());
                 }
                 Console.WriteLine();
             }
@@ -93,14 +98,13 @@ namespace Pokonsole.Source.Mapping
                 {
                     if (Tile[j, i].TileType != TileType.EMPTY) 
                     {
-                        Console.SetCursorPosition(j * 2, i);
-                        Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.SetCursorPosition(j, i);
                         Console.Write(Tile[j, i].GetString());
                     }
                     else
                     {
-                        Console.SetCursorPosition(j * 2, i);
-                        Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.SetCursorPosition(j, i);
+                        Console.BackgroundColor = ConsoleColor.DarkGreen;
                         Console.Write(" ");
                     }
                 }
