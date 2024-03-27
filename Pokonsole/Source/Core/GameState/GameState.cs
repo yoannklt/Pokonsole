@@ -23,16 +23,25 @@ namespace Pokonsole.Source.Core.GameState
 
         public void GameStateCheck()
         {
-            Update();
-            while (MainmenuF == true)
 
+            switch(state)
             {
-                HandleEvent();
-                Update();
+                case Menu:
+                    do
+                    {
+                        Update();
+                        HandleEvent();
+                    }
+                    while (MainmenuF == true);
+
+                    break;
+                    
             }
 
-            while (PausedMenu == true)
 
+            
+
+            while (PausedMenu == true)
             {
 
             }
@@ -64,19 +73,22 @@ namespace Pokonsole.Source.Core.GameState
                 case ConsoleKey.Enter:
                     switch (MainMenu.buttons[Selected].mText)
                     {
-                        case "New Game":
+                        case "NewGame":
                             MainmenuF = false;
                             // lancer jeu 
+                            Console.WriteLine("new game");
                             break;
 
-                        case "Parameters ":
-                            
+                        case "Parameters":
+
                             // ouvrir parametre ? 
+                            Console.WriteLine("param");
                             break;
 
-                        case "Load Game":
+                        case "LoadGame":
                             MainmenuF = false;
                             // charger save
+                            Console.WriteLine("chargement de la save");
                             break;
 
                         default:

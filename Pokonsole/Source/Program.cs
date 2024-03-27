@@ -10,6 +10,7 @@ public class Program
     {
         Console.CursorVisible = false;
         GameManager game = new GameManager();
+        GameState State = new();
 
         game._Map.LoadMap();
         game._Map.PlaceTile(TileType.PLAYER, game._Player._PosX, game._Player._PosY);
@@ -26,13 +27,15 @@ public class Program
 
 
 
+            
+
+
+            
+            State.GameStateCheck();
+
             //game.HandleEvent();
             //game.Update();
             //game.Draw();
-
-
-            GameState State = new();
-            State.GameStateCheck();
 
         }
         game.Quit();
