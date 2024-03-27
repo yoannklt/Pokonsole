@@ -13,9 +13,9 @@ namespace Pokonsole.Source.Pokemon
             ListAllPokemons = new List<Pokemon>();
         }
 
-        public void CreateNewPokemon(string pokemonName, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, int accuracy)
+        public void CreateNewPokemon(string pokemonName, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense)
         {
-            Pokemon newPokemon = new Pokemon(pokemonName, type, hp, level, attack, defense, speed, specialAttack, specialDefense, accuracy);
+            Pokemon newPokemon = new Pokemon(pokemonName, type, hp, level, attack, defense, speed, specialAttack, specialDefense);
             ListAllPokemons.Add(newPokemon);
         }
 

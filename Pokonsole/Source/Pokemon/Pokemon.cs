@@ -38,7 +38,7 @@ namespace Pokonsole.Source.Pokemon
     //CONSTRUCTEUR 
     internal class Pokemon
     {
-        public Pokemon(string name, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, int accuracy)
+        public Pokemon(string name, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense, bool isWild = false)
         {
             Name = name;
             Type = type;
@@ -49,20 +49,20 @@ namespace Pokonsole.Source.Pokemon
             Speed = speed;
             SpecialAttack = specialAttack;
             SpecialDefense = specialDefense;
-            Accuracy = accuracy;
+            Accuracy = 100;
             Status = POKEMON_STATUS.NORMAL;
-            _IsWild = true;
+            _IsWild = isWild;
             _IsKnockOut = false;
             _IsInCombat = false;
             _IsMyTurn = false;
-            _CapacityList = new List<string>();
+            _CapacityList = new List<Capacity>();
         }
         //METHODES 
-        public void AddCapacity(string capacityName)
+        public void AddCapacity(Capacity capacity)
         {
             if (_CapacityList.Count < 4)
             {
-                _CapacityList.Add(capacityName);
+                _CapacityList.Add(capacity);
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Pokonsole.Source.Pokemon
             }
         }
 
-        public void RemoveCapacity(string capacityName)
+        public void RemoveCapacity(Capacity capacityName)
         {
             Console.WriteLine("Do you want to remove this capacity ? (Y/N)", capacityName);
             if (Console.ReadLine() == "Y")
@@ -142,15 +142,29 @@ namespace Pokonsole.Source.Pokemon
                 Console.WriteLine("Attack missed ");
             }
         }
-        public void GetAllCapacity()
+        public Capacity GetCapacity(int index)
         {
-            foreach (var capacity in _CapacityList)
+            if (index >= 0 && index < _CapacityList.Count)
             {
+                return _CapacityList[index];
+            }
+            else
+            {
+                Console.WriteLine("This capacity doesn't exist !");
+                return null;
+            }
+        }
+        public void onDamageTaken(int damage)
+        {
+            Hp = Hp - damage;
+            if (Hp <= 0)
+            {
+                _IsKnockOut = true;
             }
         }   
-        /// onCombatVictory()
-        /// onCapture()
-        /// onUseItem()
+        public void onUseItem() { }
+
+
 
         //METHODES GETTERS / SETTERS
         public string Name { get; set; }
@@ -169,11 +183,11 @@ namespace Pokonsole.Source.Pokemon
         public bool IsKnockOut { get => _IsKnockOut; set => _IsKnockOut = value; }
         public bool IsInCombat { get => _IsInCombat; set => _IsInCombat = value; }
         public bool IsMyTurn { get => _IsMyTurn; set => _IsMyTurn = value; }
-        public List<string> CapacityList { get => _CapacityList; set => _CapacityList = value; }
+        public List<Capacity> CapacityList { get => _CapacityList; set => _CapacityList = value; }
 
 
         //VARIABLE PRIVEES
-        private List<string> _CapacityList;
+        private List<Capacity> _CapacityList;
         private int _Hp;
         private int _Level;
         private int _Attack;

@@ -11,8 +11,9 @@ public class Program
         GameManager game = new GameManager();
         PokemonManager pokemonManager = new PokemonManager();
 
-        pokemonManager.CreateNewPokemon("Squirtel", POKEMON_TYPE.WATER, 35, 1, 55, 40, 90, 50, 50, 120);
-        pokemonManager.SavePokemons();
+        //pokemonManager.CreateNewPokemon("Pikachu", POKEMON_TYPE.ELECTRIC, 35, 1, 55, 40, 90, 50, 50);
+        //pokemonManager.SavePokemons();
+        pokemonManager.LoadPokemons();
         Console.WriteLine(pokemonManager.ListAllPokemons[0].Name);
         game.Quit();
     }

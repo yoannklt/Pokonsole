@@ -1,7 +1,7 @@
 [
   {
-    "Name": "Squirtel",
-    "Type": 2,
+    "Name": "Pikachu",
+    "Type": 7,
     "Status": 0,
     "Hp": 35,
     "Level": 1,
@@ -10,10 +10,11 @@
     "Speed": 90,
     "SpecialAttack": 50,
     "SpecialDefense": 50,
-    "Accuracy": 120,
-    "IsWild": true,
+    "Accuracy": 100,
+    "IsWild": false,
     "IsKnockOut": false,
     "IsInCombat": false,
-    "IsMyTurn": false
+    "IsMyTurn": false,
+    "CapacityList": []
   }
 ]
