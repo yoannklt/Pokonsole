@@ -96,23 +96,23 @@ namespace Pokonsole.Source.Pokemons
         public void onCombatDefeate()
         {
             if (_IsWild == true)
-            {
+        {
                 Console.WriteLine("The wild " + Name + " fainted !");
             }
             else
             {
                 Console.WriteLine(Name + " fainted !");
             }
-        }
+            }
         /// onCombatExit()
         public void onCombatExit()
         {
             if (_IsWild == true)
             {
                 Console.WriteLine("The wild " + Name + " ran away !");
-            }
+        }
             else
-            {
+        {
                 onCombatDefeate();
             }
         }
@@ -175,7 +175,7 @@ namespace Pokonsole.Source.Pokemons
             if (Hp <= 0)
             {
                 _IsKnockOut = true;
-            }
+            } 
         }
         public void onUseItem() { }
 

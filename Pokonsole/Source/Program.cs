@@ -9,6 +9,7 @@ public class Program
     // ENTRY POINT
     public static void Main(string[] args)
     {
+        Console.CursorVisible = false;
         GameManager game = new GameManager();
         PokemonManager pokemonManager = new PokemonManager();
 
@@ -47,8 +48,7 @@ public class Program
         while (game._Running)
         {
             game.HandleEvent();
-            game.Update();
-            game.Draw();   
+            game.Update();  
         }
         //pokemonManager.CreateNewPokemon("Pikachu", POKEMON_TYPE.ELECTRIC, 35, 1, 55, 40, 90, 50, 50);
         //pokemonManager.SavePokemons();
