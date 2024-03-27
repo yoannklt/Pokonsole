@@ -1,4 +1,6 @@
-﻿namespace Pokonsole.Source.Player
+﻿using Pokonsole.Source.Pokemons;
+
+namespace Pokonsole.Source.Player
 {
     internal class Player
     {
@@ -20,15 +22,15 @@
         }
         public void SelectPokemon(int number) { }
 
-        public void Attack(Pokemon.Pokemon selectedPokemon)
+        public void Attack(Pokemons.Pokemon selectedPokemon)
         {
 
         }
-        public void UseObject(Pokemon.Pokemon target, int obj) { }
+        public void UseObject(Pokemons.Pokemon target, int obj) { }
         public void Escape() { }
 
         // VARIABLES MEMBRES
-        Pokemon.Pokemon[] m_Pokemons = new Pokemon.Pokemon[6];
+        Pokemons.Pokemon[] m_Pokemons = new Pokemons.Pokemon[6];
         private int PosX = 0;
         private int PosY = 0;
 
