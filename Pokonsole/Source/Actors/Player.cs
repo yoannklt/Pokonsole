@@ -1,4 +1,7 @@
-﻿using Pokonsole.Source.Mapping;
+﻿using Pokonsole.Source.Accessories;
+using Pokonsole.Source.Items.Balls;
+using Pokonsole.Source.Items.Potions;
+using Pokonsole.Source.Mapping;
 using Pokonsole.Source.Pokemons;
 using Pokonsole.Source.Systems;
 
@@ -10,7 +13,13 @@ namespace Pokonsole.Source.Actors.Player
         public Player(ref Map map, PokemonManager pkmnManager) : base(ref map)
         { 
             _pkmnManager = pkmnManager;
+            Inventory = new Inventory();
+            Inventory.AddItem(new StandardPotion());
+            Inventory.AddItem(new StandardPotion());
+            Inventory.AddItem(new Pokeball());
         }
+        public Inventory Inventory { get { return _Inventory; } set => _Inventory = value; }
+        private Inventory _Inventory;
 
         public override string Interact()
         {
@@ -33,7 +42,7 @@ namespace Pokonsole.Source.Actors.Player
                 case TileType.ENEMY:
                     CombatSystem combatSystem = new CombatSystem();
                     var random = new Random();
-                    combatSystem.CreateNewCombat(_pkmnManager.ListAllPokemons[0], _pkmnManager.ListAllPokemons[random.Next(0, _pkmnManager.ListAllPokemons.Count)]) ;
+                    combatSystem.CreateNewCombat(this, _pkmnManager.ListAllPokemons[0], _pkmnManager.ListAllPokemons[random.Next(0, _pkmnManager.ListAllPokemons.Count)]) ;
                     return "";
                 case TileType.ITEM:
                     return "Object collected: ";

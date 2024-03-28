@@ -22,9 +22,7 @@ namespace Pokonsole.Source.Core
             Map = new Map(20, 20);
             Player = new Player(ref rMap, _pokemonManager);
             Inventory = new Inventory();
-            Inventory.AddItem(new StandardPotion());
-            Inventory.AddItem(new StandardPotion());
-            Inventory.AddItem(new Pokeball());
+           
         }
 
         // METHODS
@@ -72,8 +70,8 @@ namespace Pokonsole.Source.Core
             Map.Draw();
             Console.BackgroundColor = ConsoleColor.Black;
             Console.SetCursorPosition(0, Map.Size.Y + 4);
-            Console.WriteLine(Inventory.Items[0].ItemData.Name + " " + Inventory.Items[0].Amount);
-            Console.WriteLine(Inventory.Items[1].ItemData.Name + " " + Inventory.Items[1].Amount);
+            //Console.WriteLine(Inventory.Items[0].ItemData.Name + " " + Inventory.Items[0].Amount);
+            //Console.WriteLine(Inventory.Items[1].ItemData.Name + " " + Inventory.Items[1].Amount);
         }
         public void Quit() { }
 

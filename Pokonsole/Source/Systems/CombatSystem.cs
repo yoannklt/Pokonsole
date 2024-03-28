@@ -4,14 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Accessories;
+using Pokonsole.Source.Items;
+using Pokonsole.Source.Items.Balls;
+using Pokonsole.Source.Items.Potions;
+using Pokonsole.Source.Actors;
+using Pokonsole.Source.Actors.Player;
+using System.Media;
 
 namespace Pokonsole.Source.Systems
 {
     internal class CombatSystem
     {
         public CombatSystem() { }
-        public void CreateNewCombat(Pokemon pokemon1, Pokemon pokemon2)
+        public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
+            SoundPlayer combatMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/combat_music.wav");
+            combatMusic.Play();
             bool ranAway = false;
             bool isPlayerTurn = true;
             if (pokemon1 == null || pokemon2 == null) { return; }
@@ -19,9 +28,11 @@ namespace Pokonsole.Source.Systems
             if (pokemon1 != null && pokemon2 != null)
             {
                 SetInCombat(pokemon1, pokemon2);
+                bool flee = false;
                 //Gestion de la boucle principale du combat
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
+                    Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                     if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
                     { 
                         if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
@@ -35,6 +46,7 @@ namespace Pokonsole.Source.Systems
                         Console.WriteLine("Options de jeu :");
                         Console.WriteLine("1. Attaquer");
                         Console.WriteLine("2. Utiliser un objet");
+                        Console.WriteLine("3. Prendre la fuite");
 
                         Console.Write("Choisissez une action : ");
                         string input = Console.ReadLine();
@@ -60,13 +72,19 @@ namespace Pokonsole.Source.Systems
                                         Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "2":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(1).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(1));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "3":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(2).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(2));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "4":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(3).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(3));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     default:
                                         Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
@@ -74,10 +92,46 @@ namespace Pokonsole.Source.Systems
                                 }
                                 break;
                             case "2":
-                                // Si le joueur choisit d'utiliser un objet, exécutez l'utilisation de l'objet
-                                // Ajoutez la logique pour utiliser un objet selon vos besoins
+                                Console.WriteLine("Choisissez un objet à utiliser : ");
+                                for (int i = 0; i < player.Inventory.Items.Count; i++)
+                                {
+                                    Console.WriteLine(i+1 + " : " + player.Inventory.Items[i].ItemData.Name);
+                                }
+                                string inputAction = Console.ReadLine();
+                                switch (inputAction)
+                                {
+                                    case "1":
+                                        pokemon1.Hp = pokemon1.Hp +30;
+                                        Console.WriteLine(pokemon1.Hp);
+                                        break;
+                                    case "2":
+                                        if (pokemon2.IsWild == true)
+                                        {
+                                            Random randomCatch = new Random();
+                                            if(randomCatch.Next(0,100) >= 50)
+                                            {
+                                                Console.WriteLine("catched");
+                                                pokemon2.IsWild = false;
+                                                //ajouter à mon équipe
+                                                pokemon2.IsKnockOut = true;
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
+                                        break;
+                                }
                                 break;
                             // Ajoutez d'autres cas pour gérer d'autres options...
+                            case "3":
+                                //pokemon1.IsKnockOut = true;
+                                flee = true;
+                                Console.WriteLine("Vous avez fuit le combat");
+                                break;
                             default:
                                 Console.WriteLine("Option invalide. Veuillez entrer un numéro valide.");
                                 break;
@@ -110,6 +164,9 @@ namespace Pokonsole.Source.Systems
                             }
                         }
                     }
+
+                    if (flee) break;
+
                     isPlayerTurn = !isPlayerTurn;
                 }
 
@@ -135,7 +192,7 @@ namespace Pokonsole.Source.Systems
                 }
 
             }
-
+            combatMusic.Stop();
         }
 
         public void SetInCombat(Pokemon pokemon1, Pokemon pokemon2)
