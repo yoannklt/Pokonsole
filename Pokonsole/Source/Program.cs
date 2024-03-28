@@ -14,9 +14,6 @@ public class Program
         GameManager game = new GameManager();
         SoundPlayer mainMusic = new SoundPlayer("../../../Source/Utils/main_music.wav");
         GameState gameState = new GameState();
-        game.Map.LoadMap();
-        game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
-
         game.Map.LoadSecMap();
         game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y); 
         game.Draw();

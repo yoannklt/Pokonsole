@@ -18,8 +18,6 @@ namespace Pokonsole.Source.Actors.Player
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new Pokeball());
-        public Player(ref Map map) : base(ref map)
-        {
             Position = new MathHelper.Vector2(1, 1);
         }
         public Inventory Inventory { get { return _Inventory; } set => _Inventory = value; }
