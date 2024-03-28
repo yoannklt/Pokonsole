@@ -2,6 +2,7 @@
 using Pokonsole.Source.Items.Balls;
 using Pokonsole.Source.Items.Potions;
 using Pokonsole.Source.Mapping;
+using Pokonsole.Source.Utils;
 using Pokonsole.Source.Pokemons;
 using Pokonsole.Source.Systems;
 
@@ -17,6 +18,9 @@ namespace Pokonsole.Source.Actors.Player
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new Pokeball());
+        public Player(ref Map map) : base(ref map)
+        {
+            Position = new MathHelper.Vector2(1, 1);
         }
         public Inventory Inventory { get { return _Inventory; } set => _Inventory = value; }
         private Inventory _Inventory;
@@ -49,6 +53,19 @@ namespace Pokonsole.Source.Actors.Player
 
                 case TileType.WATER:
                     return "Wotah";
+
+                case TileType.DOOR:
+                    if (Map.Version == 1)
+                    {
+                        Map.LoadSecMap();
+                        SetPosition(10, 15);
+                    }
+                    else
+                    {
+                        Map.LoadMap();
+                        SetPosition(10, 19);
+                    }
+                    return "";
 
                 default:
                     return "";

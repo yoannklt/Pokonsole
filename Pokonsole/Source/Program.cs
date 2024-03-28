@@ -16,6 +16,9 @@ public class Program
         GameState gameState = new GameState();
         game.Map.LoadMap();
         game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
+
+        game.Map.LoadSecMap();
+        game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y); 
         game.Draw();
 
         while (gameState._flag != GameState.GAMESTATE.GAME_OVER)

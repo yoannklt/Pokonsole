@@ -20,7 +20,6 @@ namespace Pokonsole.Source.Accessories
             {
                 Items.Add(item);
             }
-
         }
 
         private List<Item>? _Items;

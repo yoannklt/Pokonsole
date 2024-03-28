@@ -8,23 +8,25 @@ namespace Pokonsole.Source.Mapping
         {
             Size = new MathHelper.Vector2(x, y);
             Tile = new Tile[Size.X, Size.Y];
+            ClearTiles = new Tile[Size.X, Size.Y];
         }
 
         public void LoadMap()
         {
             try
             {
-                using (StreamReader sr = new("../../../Source/Data/Map.txt"))
+                using (StreamReader sr = new("../../../Source/Data/Inside.txt"))
                 {
                     var txt = sr.ReadToEnd();
                     string[] allLines = txt.Split("\r\n");
 
                     for (int i = 0; i < allLines.Length; i++)
                     {
-                        for(int j = 0; j < allLines[i].Length; j++)
+                        for (int j = 0; j < allLines[i].Length; j++)
                         {
                             TileType type = ConvertToTileType(allLines[j][i]);
-                            PlaceTile(type, i, j); 
+                            ClearTiles[i, j] = new Tile(type);
+                            PlaceTile(type, i, j);
                         }
                     }
 
@@ -34,8 +36,36 @@ namespace Pokonsole.Source.Mapping
             {
                 Console.WriteLine(ex.Message);
             }
-
+            Version = 1;
         }
+
+        public void LoadSecMap()
+        {
+            try
+            {
+                using (StreamReader sr = new("../../../Source/Data/Outside.txt"))
+                {
+                    var txt = sr.ReadToEnd();
+                    string[] allLines = txt.Split("\r\n");
+
+                    for (int i = 0; i < allLines.Length; i++)
+                    {
+                        for (int j = 0; j < allLines[i].Length; j++)
+                        {
+                            TileType type = ConvertToTileType(allLines[j][i]);
+                            ClearTiles[i, j] = new Tile(type);
+                            PlaceTile(type, i, j);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Version = 2;
+        }
+
 
         public TileType ConvertToTileType(char c)
         {
@@ -45,22 +75,25 @@ namespace Pokonsole.Source.Mapping
                     return TileType.EMPTY;
 
                 case '1':
-                    return TileType.ENEMY;
+                    return TileType.HOUSE_WALL;
 
                 case '2':
-                    return TileType.BUSH;
+                    return TileType.ROOF;
 
                 case '3':
-                    return TileType.TREE;
+                    return TileType.SECOND_ROOF;
 
                 case '4':
-                    return TileType.HORIZONTAL_WALL;
-
-                case '5':
                     return TileType.WALL;
 
+                case '5':
+                    return TileType.FLOOR;
+
                 case '6':
-                    return TileType.WATER;
+                    return TileType.POKEMON;
+
+                case '7':
+                    return TileType.DOOR;
 
                 default : return TileType.EMPTY;
             }
@@ -68,7 +101,8 @@ namespace Pokonsole.Source.Mapping
 
         public void PlaceTile(TileType type, int x, int y)
         {
-            if (x > Size.X - 1 || y > Size.Y - 1) return; 
+            if (x > Size.X - 1 || y > Size.Y - 1) 
+                return; 
             Tile[x, y] = new Tile(type);
         }
 
@@ -78,12 +112,7 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    if (Tile[i, j].TileType == TileType.PLAYER) 
-                    {
-                        Console.Write(Tile[j, i].GetString());
-                    }
-                    else 
-                        Console.Write(Tile[j, i].GetString());
+                    Console.Write(Tile[j, i].GetString() + " ");
                 }
                 Console.WriteLine();
             }
@@ -96,24 +125,15 @@ namespace Pokonsole.Source.Mapping
             {
                 for (int j = 0; j < Size.Y; j++)
                 {
-                    if (Tile[j, i].TileType != TileType.EMPTY) 
-                    {
-                        Console.SetCursorPosition(j, i);
-                        Console.Write(Tile[j, i].GetString());
-                    }
-                    else
-                    {
-                        Console.SetCursorPosition(j, i);
-                        Console.BackgroundColor = ConsoleColor.DarkGreen;
-                        Console.Write(" ");
-                    }
+                    Console.SetCursorPosition(i * 2, j);
+                    Console.Write(Tile[i, j].GetString() + " ");
                 }
             }
         }
 
         public void ClearTile(int x, int y)
         {
-            Tile[x, y] = new Tile(TileType.EMPTY);
+            Tile[x, y] = ClearTiles[x, y]; 
         }
 
         public void ClearMap()
@@ -130,8 +150,13 @@ namespace Pokonsole.Source.Mapping
         private Tile[,]? _Tile;
         public Tile[,] Tile { get { return _Tile; } set { _Tile = value; } }
 
+        public Tile[,] ClearTiles;
+
         private MathHelper.Vector2 _Size = new MathHelper.Vector2(0, 0);
         public MathHelper.Vector2 Size { get { return _Size; } set {  _Size = value; } }
+
+        private int _version;
+        public int Version { get { return _version; } set { _version = value; } }
 
     }
 }
