@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pokonsole.Source.Pokemons;
-using Pokonsole.Source.Accessories;
-using Pokonsole.Source.Items;
-using Pokonsole.Source.Items.Balls;
-using Pokonsole.Source.Items.Potions;
-using Pokonsole.Source.Actors;
+﻿using Pokonsole.Source.Pokemons;
 using Pokonsole.Source.Actors.Player;
 using System.Media;
 
@@ -17,12 +7,31 @@ namespace Pokonsole.Source.Systems
     internal class CombatSystem
     {
         public CombatSystem() { }
+
+        public void ClearBuffer(ref Player player)
+        {
+            int line = 1;
+            Console.SetCursorPosition(player.Map.Size.X + 4, line);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line + 1);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line + 3);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line + 4);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line + 5);
+            Console.Write("                                            ");
+            Console.SetCursorPosition(player.Map.Size.X + 4, line);
+        }
         public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
             SoundPlayer combatMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/combat_music.wav");
             combatMusic.Play();
             bool ranAway = false;
             bool isPlayerTurn = true;
+            int line = 1;
             if (pokemon1 == null || pokemon2 == null) { return; }
 
             if (pokemon1 != null && pokemon2 != null)
@@ -30,9 +39,11 @@ namespace Pokonsole.Source.Systems
                 SetInCombat(pokemon1, pokemon2);
                 bool flee = false;
                 //Gestion de la boucle principale du combat
+                Console.SetCursorPosition(player.Map.Size.X + 4, line);
+
+                Console.Write(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
-                    Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                     if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
                     { 
                         if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
@@ -41,68 +52,88 @@ namespace Pokonsole.Source.Systems
 
                     if (isPlayerTurn)
                     {
+                        ClearBuffer(ref player);
+                        Console.Write("Player 1's turn :");
+                        Console.SetCursorPosition(player.Map.Size.X + 4, line+1);
+                        Console.Write("Options de jeu :");
+                        Console.SetCursorPosition(player.Map.Size.X + 4, line+2);
+                        Console.Write("1. Attaquer");
+                        Console.SetCursorPosition(player.Map.Size.X + 4, line+3);
 
-                        Console.WriteLine("Player 1's turn :");
-                        Console.WriteLine("Options de jeu :");
-                        Console.WriteLine("1. Attaquer");
-                        Console.WriteLine("2. Utiliser un objet");
-                        Console.WriteLine("3. Prendre la fuite");
+                        Console.Write("2. Utiliser un objet");
+                        Console.SetCursorPosition(player.Map.Size.X + 4, line+4);
+
+                        Console.Write("3. Prendre la fuite");
+                        Console.SetCursorPosition(player.Map.Size.X + 4, line+5);
+
 
                         Console.Write("Choisissez une action : ");
                         string input = Console.ReadLine();
                         switch (input)
                         {
                             case "1": //attaquer
-                                // Si le joueur choisit d'attaquer, exécutez l'attaque
-                                Console.WriteLine("Choisissez une attaque : ");
-                                for (int i = 0; i < pokemon1.CapacityList.Count; i++) //pokemon1.CapacityList.Size ??
+                                      // Si le joueur choisit d'attaquer, exécutez l'attaque
+                                      //ClearBuffer(ref player);
+                                ClearBuffer(ref player);
+
+                                Console.Write("Choisissez une attaque : ");
+                                /*for (int i = 0; i < pokemon1.CapacityList.Count; i++) //pokemon1.CapacityList.Size ??
                                 {
-
-                                    Console.WriteLine(i + 1 + " : " + pokemon1.GetCapacity(i).Name);
-
-                                }
+                                    Console.SetCursorPosition(player.Map.Size.X + 4, line + i + 1); 
+                                    Console.Write(i + 1 + " : " + pokemon1.GetCapacity(i).Name);
+                                }*/ 
 
                                 //pokemon1.GetAllCapacities
                                 string inputAttack = Console.ReadLine();
                                 switch (inputAttack)
                                 {
                                     case "1":
-                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(0).Name);
+                                        Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+                                        Console.Write(pokemon1.Name + " attaque " + pokemon1.GetCapacity(0).Name);
                                         UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(0));
-                                        Console.WriteLine(pokemon2.Hp);
+                                        Console.Write(pokemon2.Hp);
                                         break;
                                     case "2":
-                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(1).Name);
+                                        Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+                                        Console.Write(pokemon1.Name + " attaque " + pokemon1.GetCapacity(1).Name);
                                         UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(1));
-                                        Console.WriteLine(pokemon2.Hp);
+                                        Console.Write(pokemon2.Hp);
                                         break;
                                     case "3":
-                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(2).Name);
+                                        //Console.Write("                                   ");
+                                        //Console.SetCursorPosition(player.Map.Size.X + 4, 1);
+                                        Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+                                        Console.Write(pokemon1.Name + " attaque " + pokemon1.GetCapacity(2).Name);
                                         UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(2));
-                                        Console.WriteLine(pokemon2.Hp);
+                                        Console.Write(pokemon2.Hp);
                                         break;
                                     case "4":
-                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(3).Name);
+                                        Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+                                        Console.Write(pokemon1.Name + " attaque " + pokemon1.GetCapacity(3).Name);
                                         UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(3));
-                                        Console.WriteLine(pokemon2.Hp);
+                                        Console.Write(pokemon2.Hp);
                                         break;
                                     default:
-                                        Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
+                                        Console.SetCursorPosition(player.Map.Size.X + 4, line + 2);
+                                        // Console.Write("                                   ");
+                                        // Console.SetCursorPosition(player.Map.Size.X + 4, 1);
+                                        Console.Write("Option invalide. Veuillez entrer un numéro valide");
                                         break;
                                 }
                                 break;
                             case "2":
-                                Console.WriteLine("Choisissez un objet à utiliser : ");
+                                ClearBuffer(ref player);
+                                Console.Write("Choisissez un objet à utiliser : ");
                                 for (int i = 0; i < player.Inventory.Items.Count; i++)
                                 {
-                                    Console.WriteLine(i+1 + " : " + player.Inventory.Items[i].ItemData.Name);
+                                    Console.Write(i+1 + " : " + player.Inventory.Items[i].ItemData.Name);
                                 }
                                 string inputAction = Console.ReadLine();
                                 switch (inputAction)
                                 {
                                     case "1":
                                         pokemon1.Hp = pokemon1.Hp +30;
-                                        Console.WriteLine(pokemon1.Hp);
+                                        Console.Write(pokemon1.Hp);
                                         break;
                                     case "2":
                                         if (pokemon2.IsWild == true)
@@ -110,7 +141,7 @@ namespace Pokonsole.Source.Systems
                                             Random randomCatch = new Random();
                                             if(randomCatch.Next(0,100) >= 50)
                                             {
-                                                Console.WriteLine("catched");
+                                                Console.Write("catched");
                                                 pokemon2.IsWild = false;
                                                 //ajouter à mon équipe
                                                 pokemon2.IsKnockOut = true;
@@ -122,29 +153,34 @@ namespace Pokonsole.Source.Systems
                                         }
                                         break;
                                     default:
-                                        Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
+                                        Console.Write("Option invalide. Veuillez entrer un numéro valide");
                                         break;
                                 }
                                 break;
                             // Ajoutez d'autres cas pour gérer d'autres options...
                             case "3":
+                                ClearBuffer(ref player);
                                 //pokemon1.IsKnockOut = true;
                                 flee = true;
-                                Console.WriteLine("Vous avez fuit le combat");
+                                Console.Write("                                   ");
+                                Console.SetCursorPosition(player.Map.Size.X + 4, 1);
+                                Console.Write("Vous avez fuit le combat");
                                 break;
                             default:
-                                Console.WriteLine("Option invalide. Veuillez entrer un numéro valide.");
+                                Console.Write("                                   ");
+                                Console.SetCursorPosition(player.Map.Size.X + 4, 1);
+                                Console.Write("Option invalide. Veuillez entrer un numéro valide.");
                                 break;
                         }
                     }
                     else //IA Turn
                     {
-                        Console.WriteLine("IA turn :");
+                        Console.Write(pokemon2.Name + "turn :");
                         if (pokemon2.IsWild == false)
                         {
                             var randomIAMove = new Random();
                             UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 4)));
-                            //Console.WriteLine(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
+                            //Console.Write(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
                         }
                         else
                         {
@@ -153,7 +189,7 @@ namespace Pokonsole.Source.Systems
                             {
                                 //random attack entre capa 1 à 4
                                 UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 4)));
-                                //Console.WriteLine(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
+                                //Console.Write(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
                             }
                             else
                             {
@@ -236,41 +272,41 @@ namespace Pokonsole.Source.Systems
             // Vérifiez si l'attaquant est en combat
             if (!attacker.IsInCombat)
             {
-                Console.WriteLine(attacker.Name + " is not in combat.");
+                Console.Write(attacker.Name + " is not in combat.");
                 return;
             }
 
             // Vérifiez si le Pokémon attaquant a la capacité spécifiée
             /*if (!attacker.CapacityList.Contains(capacity.Name))
             {
-                Console.WriteLine(attacker._Name + " does not have the " + capacity.Name + " ability.");
+                Console.Write(attacker._Name + " does not have the " + capacity.Name + " ability.");
                 return;
             }*/
 
             // Affichez un message pour indiquer que la capacité a été utilisée
-            Console.WriteLine(attacker.Name + " used " + capacity.Name + " on " + target.Name + ".");
+            Console.Write(attacker.Name + " used " + capacity.Name + " on " + target.Name + ".");
 
             // Utilisez la capacité sur la cible
 
             capacity.IsAttackMissed();
             if (capacity.AttackMissed == true)
             {
-                Console.WriteLine(attacker.Name + " has missed his attack on " + target.Name);
-                Console.WriteLine(target.Name + " has " + target.Hp + " pv left ! ");
-                Console.WriteLine(target.Name + " is " + target.Status);
+                Console.Write(attacker.Name + " has missed his attack on " + target.Name);
+                Console.Write(target.Name + " has " + target.Hp + " pv left ! ");
+                Console.Write(target.Name + " is " + target.Status);
                 return;
             }
             else if (capacity.AttackMissed != true)
             {
                 capacity.CapacityDamage(target);
-                Console.WriteLine(attacker.Name + " has damaged " + target.Name + " up to " + capacity.Power + " damage !");
-                Console.WriteLine(target.Name + " has " + target.Hp + " pv left ! ");
+                Console.Write(attacker.Name + " has damaged " + target.Name + " up to " + capacity.Power + " damage !");
+                Console.Write(target.Name + " has " + target.Hp + " pv left ! ");
 
             }
             if (capacity.Status != POKEMON_STATUS.NORMAL)
             {
                 target.Status = capacity.Status;
-                Console.WriteLine(target.Name + " is " + target.Status);
+                Console.Write(target.Name + " is " + target.Status);
             }
 
         }

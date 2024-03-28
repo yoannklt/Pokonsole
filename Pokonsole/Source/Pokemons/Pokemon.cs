@@ -67,7 +67,7 @@ namespace Pokonsole.Source.Pokemons
             }
             else
             {
-                Console.WriteLine("You can't add more than 4 capacities to a pokemon !");
+                Console.Write("You can't add more than 4 capacities to a pokemon !");
                 /// RemoveCapacity(capacityName);
 
             }
@@ -75,7 +75,7 @@ namespace Pokonsole.Source.Pokemons
 
         public void RemoveCapacity(Capacity capacityName)
         {
-            Console.WriteLine("Do you want to remove this capacity ? (Y/N)", capacityName);
+            Console.Write("Do you want to remove this capacity ? (Y/N)", capacityName);
             if (Console.ReadLine() == "Y")
             {
                 _CapacityList.Remove(capacityName);
@@ -85,11 +85,11 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("A wild " + Name + " appeared !");
+                Console.Write("A wild " + Name + " appeared !");
             }
             else
             {
-                Console.WriteLine(Name + " is ready to fight !");
+                Console.Write(Name + " is ready to fight !");
             }
         }
         /// onCombatDefeate()
@@ -97,11 +97,11 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
         {
-                Console.WriteLine("The wild " + Name + " fainted !");
+                Console.Write("The wild " + Name + " fainted !");
             }
             else
             {
-                Console.WriteLine(Name + " fainted !");
+                Console.Write(Name + " fainted !");
             }
             }
         /// onCombatExit()
@@ -109,7 +109,7 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("The wild " + Name + " ran away !");
+                Console.Write("The wild " + Name + " ran away !");
         }
             else
         {
@@ -121,11 +121,11 @@ namespace Pokonsole.Source.Pokemons
         {
             if (_IsWild == true)
             {
-                Console.WriteLine("You caught the wild " + Name + " !");
+                Console.Write("You caught the wild " + Name + " !");
             }
             else
             {
-                Console.WriteLine(Name + " won the fight !");
+                Console.Write(Name + " won the fight !");
             }
         }
         public void attack(Pokemon target, Capacity capacity)
@@ -133,28 +133,28 @@ namespace Pokonsole.Source.Pokemons
             var rand = new Random();
             if (capacity.Accuracy == 100)
             {
-                Console.WriteLine("Attack 1");
+                Console.Write("Attack 1");
                 target.Hp = target.Hp - capacity.Power;
                 if (capacity.Status != POKEMON_STATUS.NORMAL)
                 {
                     target.Status = capacity.Status;
                 }
-                Console.WriteLine(target.Hp);
+                Console.Write(target.Hp);
 
             }
             else if (rand.Next(0, 100) <= capacity.Accuracy)
             {
-                Console.WriteLine("Attack 2");
+                Console.Write("Attack 2");
                 target.Hp = target.Hp - capacity.Power;
                 if (capacity.Status != POKEMON_STATUS.NORMAL)
                 {
                     target.Status = capacity.Status;
                 }
-                Console.WriteLine(target.Hp);
+                Console.Write(target.Hp);
             }
             else
             {
-                Console.WriteLine("Attack missed ");
+                Console.Write("Attack missed ");
             }
         }
         public Capacity GetCapacity(int index)
@@ -165,7 +165,7 @@ namespace Pokonsole.Source.Pokemons
             }
             else
             {
-                Console.WriteLine("This capacity doesn't exist !");
+                Console.Write("This capacity doesn't exist !");
                 return null;
             }
         }
