@@ -4,13 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Accessories;
+using Pokonsole.Source.Items;
+using Pokonsole.Source.Items.Balls;
+using Pokonsole.Source.Items.Potions;
+using Pokonsole.Source.Actors;
+using Pokonsole.Source.Actors.Player;
 
 namespace Pokonsole.Source.Systems
 {
     internal class CombatSystem
     {
         public CombatSystem() { }
-        public void CreateNewCombat(Pokemon pokemon1, Pokemon pokemon2)
+        public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
             bool ranAway = false;
             bool isPlayerTurn = true;
@@ -74,8 +80,41 @@ namespace Pokonsole.Source.Systems
                                 }
                                 break;
                             case "2":
-                                // Si le joueur choisit d'utiliser un objet, exécutez l'utilisation de l'objet
-                                // Ajoutez la logique pour utiliser un objet selon vos besoins
+                                Console.WriteLine("Choisissez un objet à utiliser : ");
+                                for (int i = 0; i < player.Inventory.Items.Count; i++)
+                                {
+                                    Console.WriteLine(i+1 + " : " + player.Inventory.Items[i].ItemData.Name);
+                                }
+                                string inputAction = Console.ReadLine();
+                                switch (inputAction)
+                                {
+                                    case "1":
+                                        pokemon1.Hp = pokemon1.Hp +30;
+                                        Console.WriteLine(pokemon1.Hp);
+                                        break;
+                                    case "2":
+                                        if (pokemon2.IsWild == true)
+                                        {
+                                            Random randomCatch = new Random();
+                                            if(randomCatch.Next(0,100) >= 50)
+                                            {
+                                                Console.WriteLine("catched");
+                                                pokemon2.IsWild = false;
+                                                //ajouter à mon équipe
+                                                pokemon2.IsKnockOut = true;
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
+                                        break;
+                                }
+
+
                                 break;
                             // Ajoutez d'autres cas pour gérer d'autres options...
                             default:

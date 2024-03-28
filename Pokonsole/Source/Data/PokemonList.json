@@ -11,7 +11,7 @@
     "SpecialAttack": 50,
     "SpecialDefense": 50,
     "Accuracy": 100,
-    "IsWild": false,
+    "IsWild": true,
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
