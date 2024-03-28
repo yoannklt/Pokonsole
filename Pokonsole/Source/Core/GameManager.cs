@@ -58,7 +58,6 @@ namespace Pokonsole.Source.Core
         public void Update()
         {
             Map.Update();
-            Player.Update();
         }
         public void Draw()
         {

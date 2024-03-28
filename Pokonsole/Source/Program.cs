@@ -9,8 +9,8 @@ public class Program
         Console.CursorVisible = false;
         GameManager game = new GameManager();
 
-        game.Map.LoadMap();
-        game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
+        game.Map.LoadSecMap();
+        game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y); 
         game.Draw();
 
         while(game._Running)

@@ -7,13 +7,18 @@ namespace Pokonsole.Source.Mapping
         None = 0,
         ANGULAR_WALL,
         BUSH,
+        DOOR,
         EMPTY,
         ENEMY,
         HORIZONTAL_WALL,
+        HOUSE_WALL,
+        FLOOR,
         ITEM,
         TREE,
         PLAYER,
         POKEMON,
+        ROOF,
+        SECOND_ROOF,
         WALL,
         WATER,
         TOTAL_TILE_TYPE
@@ -25,52 +30,52 @@ namespace Pokonsole.Source.Mapping
 
         public string GetString()
         {
-            Console.ForegroundColor = ConsoleColor.White;
             switch (Type)
             {
-                case TileType.BUSH:
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    return " ";
-
-                case TileType.POKEMON:
-                    Console.BackgroundColor = ConsoleColor.DarkRed;
-                    return " ";
-
                 case TileType.EMPTY:
-                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    Console.BackgroundColor = ConsoleColor.Green;
                     return " ";
 
                 case TileType.WALL:
-                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    Console.BackgroundColor = ConsoleColor.White;
                     return " ";
 
-                case TileType.TREE:
-                    Console.BackgroundColor = ConsoleColor.Green;
+                case TileType.FLOOR:
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
                     return " ";
 
-                case TileType.ENEMY:
+                case TileType.POKEMON:
                     Console.BackgroundColor = ConsoleColor.Red;
                     return " ";
 
+                case TileType.ROOF:
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    return " ";
+
+                case TileType.SECOND_ROOF:
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    return " ";
+
+                case TileType.HOUSE_WALL:
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    return " ";
+
+                case TileType.DOOR:
+                    Console.BackgroundColor = ConsoleColor.DarkYellow;
+                    return " ";
+
                 case TileType.PLAYER:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    return " ";
-
-                case TileType.ITEM:
-                    Console.BackgroundColor = ConsoleColor.DarkMagenta;
-                    return " ";
-
-                case TileType.HORIZONTAL_WALL:
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    return " ";
-
-                case TileType.WATER:
-                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
                     return " ";
 
                 default:
-                    return "";
+                    return " ";
             }
+        }
+
+        public void ChangeColor(ConsoleColor color)
+        {
+            Console.BackgroundColor = color;
         }
 
         public TileType TileType { get => Type; set { Type = value; } }

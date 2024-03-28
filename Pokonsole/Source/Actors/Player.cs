@@ -1,12 +1,13 @@
 ﻿using Pokonsole.Source.Mapping;
+using Pokonsole.Source.Utils;
 
 namespace Pokonsole.Source.Actors.Player
 {
     internal class Player : Actor
     {
         public Player(ref Map map) : base(ref map)
-        { 
-        
+        {
+            Position = new MathHelper.Vector2(1, 1);
         }
 
         public override string Interact()
@@ -35,6 +36,19 @@ namespace Pokonsole.Source.Actors.Player
 
                 case TileType.WATER:
                     return "Wotah";
+
+                case TileType.DOOR:
+                    if (Map.Version == 1)
+                    {
+                        Map.LoadSecMap();
+                        SetPosition(10, 15);
+                    }
+                    else
+                    {
+                        Map.LoadMap();
+                        SetPosition(10, 19);
+                    }
+                    return "";
 
                 default:
                     return "";
