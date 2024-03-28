@@ -1,4 +1,7 @@
-﻿using Pokonsole.Source.Utils;
+﻿using Pokonsole.Source.Actors.Player;
+using Pokonsole.Source.Core;
+using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Utils;
 
 namespace Pokonsole.Source.Mapping
 {
@@ -90,7 +93,7 @@ namespace Pokonsole.Source.Mapping
             Console.WriteLine();
         }
 
-        public void Update()
+        public void Update(GameManager manager)
         {
             for (int i = 0; i < Size.X; i++)
             {
@@ -108,6 +111,22 @@ namespace Pokonsole.Source.Mapping
                         Console.Write(" ");
                     }
                 }
+            }
+            Console.BackgroundColor = ConsoleColor.Black;
+            
+            if (manager.Player.myPokemons !=null && manager.Player.myPokemons.Count != 0 )
+            {
+                string myPokemonsName = "";
+                for (int i = 0; i < manager.Player.myPokemons.Count; i ++ )
+                {
+                    myPokemonsName += manager.Player.myPokemons[i].Name;
+                    myPokemonsName += "  ";
+                }
+                Console.WriteLine(myPokemonsName);
+            }
+            else
+            {
+                Console.WriteLine(" ");
             }
         }
 

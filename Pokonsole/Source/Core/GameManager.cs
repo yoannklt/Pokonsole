@@ -60,9 +60,9 @@ namespace Pokonsole.Source.Core
             Console.SetCursorPosition(0, Map.Size.Y + 2);
             Console.Write(" ");
         }
-        public void Update()
+        public void Update() 
         {
-            Map.Update();
+            Map.Update(this);
             Player.Update();
         }
         public void Draw()

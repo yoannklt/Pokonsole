@@ -19,7 +19,7 @@ namespace Pokonsole.Source.Systems
         public CombatSystem() { }
         public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
-            SoundPlayer combatMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/combat_music.wav");
+            SoundPlayer combatMusic = new SoundPlayer("../../../Source/Utils/combat_music.wav");
             combatMusic.Play();
             bool ranAway = false;
             bool isPlayerTurn = true;
@@ -29,10 +29,12 @@ namespace Pokonsole.Source.Systems
             {
                 SetInCombat(pokemon1, pokemon2);
                 bool flee = false;
+                bool catched = false;
                 //Gestion de la boucle principale du combat
+                Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
+
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
-                    Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                     if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
                     { 
                         if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
@@ -108,17 +110,18 @@ namespace Pokonsole.Source.Systems
                                         if (pokemon2.IsWild == true)
                                         {
                                             Random randomCatch = new Random();
-                                            if(randomCatch.Next(0,100) >= 50)
+                                            if(randomCatch.Next(0, 100) >= 50)
                                             {
-                                                Console.WriteLine("catched");
-                                                pokemon2.IsWild = false;
-                                                //ajouter à mon équipe
-                                                pokemon2.IsKnockOut = true;
+                                                player.myPokemons.Add(pokemon2);
+                                                Console.WriteLine(pokemon2.Name + " catched ");
+                                                catched = true;
                                             }
                                             else
                                             {
+                                                Console.WriteLine(pokemon2.Name + " not catched ");
                                                 break;
                                             }
+                                            break;
                                         }
                                         break;
                                     default:
@@ -149,7 +152,7 @@ namespace Pokonsole.Source.Systems
                         else
                         {
                             var randomIAMove = new Random();
-                            if (randomIAMove.Next(0, 100) >= 90)
+                            if (randomIAMove.Next(0, 100) <= 0)
                             {
                                 //random attack entre capa 1 à 4
                                 UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 4)));
@@ -158,6 +161,8 @@ namespace Pokonsole.Source.Systems
                             else
                             {
                                 //Fuite du pokémon
+                                Console.WriteLine(pokemon2.Name + " ran away !");
+                                
                                 pokemon2.onCombatExit();
                                 ranAway = true;
                                 pokemon2.IsKnockOut = true;
@@ -166,6 +171,7 @@ namespace Pokonsole.Source.Systems
                     }
 
                     if (flee) break;
+                    if (catched==true) break;
 
                     isPlayerTurn = !isPlayerTurn;
                 }
@@ -193,6 +199,7 @@ namespace Pokonsole.Source.Systems
 
             }
             combatMusic.Stop();
+            Console.Clear();
         }
 
         public void SetInCombat(Pokemon pokemon1, Pokemon pokemon2)

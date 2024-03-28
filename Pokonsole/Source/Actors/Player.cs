@@ -10,6 +10,7 @@ namespace Pokonsole.Source.Actors.Player
     internal class Player : Actor
     {
         PokemonManager _pkmnManager;
+        public List<Pokemon> myPokemons;
         public Player(ref Map map, PokemonManager pkmnManager) : base(ref map)
         { 
             _pkmnManager = pkmnManager;
@@ -17,9 +18,11 @@ namespace Pokonsole.Source.Actors.Player
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new Pokeball());
+            myPokemons = new List<Pokemon>();
         }
         public Inventory Inventory { get { return _Inventory; } set => _Inventory = value; }
         private Inventory _Inventory;
+        
 
         public override string Interact()
         {

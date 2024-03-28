@@ -75,7 +75,7 @@ public class Program
 
         Console.CursorVisible = false;
         GameManager game = new GameManager();
-        SoundPlayer mainMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/main_music.wav");
+        SoundPlayer mainMusic = new SoundPlayer("../../../Source/Utils/main_music.wav");
         mainMusic.Play();
         game.Map.LoadMap();
         game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
