@@ -1,48 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using Pokonsole.Source.Pokemons;
+using Pokonsole.Source.Utils;
 
 namespace Pokonsole.Source.Pokemons
 {
     internal class PokemonManager
     {
         private PokemonParser parser;
+        private CapacityManager capacityManager;
 
         public PokemonManager()
         {
             parser = new PokemonParser();
+            capacityManager = new CapacityManager();
             ListAllPokemons = new List<Pokemon>();
         }
 
-        public void CreateNewPokemon(string pokemonName, POKEMON_TYPE type, int hp, int level, int attack, int defense, int speed, int specialAttack, int specialDefense)
+        // Charge les Pokémon à partir du fichier PokemonList.json
+        public void LoadPokemons()
         {
-            Pokemon newPokemon = new Pokemon(pokemonName, type, hp, level, attack, defense, speed, specialAttack, specialDefense);
-            ListAllPokemons.Add(newPokemon);
+            ListAllPokemons = parser.LoadPokemons();
         }
 
-        public void RemovePokemon(string pokemonName)
-        {
-            Pokemon pokemonToRemove = ListAllPokemons.Find(p => p.Name == pokemonName);
+        // Charge les Pokémon avec les capacités associées
+        // Charge les Pokémon avec les capacités associées
+        //public void LoadPokemonsWithCapacities()
+        //{
+        //    List<Pokemon> pokemons = parser.LoadPokemons();
 
-            if (pokemonToRemove != null)
-            {
-                ListAllPokemons.Remove(pokemonToRemove);
-                //Console.WriteLine($"Pokemon '{pokemonName}' removed successfully.");
-            }
-            else
-            {
-                //Console.WriteLine($"Pokemon '{pokemonName}' not found.");
-            }
-        }
+        //    foreach (Pokemon pokemon in pokemons)
+        //    {
+        //        List<Capacity> pokemonCapacities = new List<Capacity>();
+        //        foreach (int capacityId in pokemon.CapacityList)
+        //        {
+        //            if (capacityManager.Capacities.ContainsKey(capacityId))
+        //            {
+        //                pokemonCapacities.Add(capacityManager.Capacities[capacityId]);
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine($"Capacité avec l'ID {capacityId} non trouvée pour le Pokémon {pokemon.Name}");
+        //            }
+        //        }
+        //        pokemon.CapacityList = pokemonCapacities;
+        //    }
+
+        //    ListAllPokemons.AddRange(pokemons);
+        //}
 
         public void SavePokemons()
         {
             parser.SavePokemons(ListAllPokemons);
-        }
-
-        public void LoadPokemons()
-        {
-            ListAllPokemons = parser.LoadPokemons();
         }
 
         public List<Pokemon> ListAllPokemons { get; set; }

@@ -1,56 +1,67 @@
-﻿using Pokonsole.Source.Pokemons;
+﻿using System;
 
-
-﻿namespace Pokonsole.Source.Pokemons
-
+namespace Pokonsole.Source.Pokemons
 {
     internal class Capacity
     {
-        //CONSTRUTEUR
-        public Capacity(string name, POKEMON_TYPE type, int power, int accuracy, POKEMON_STATUS effet = POKEMON_STATUS.NORMAL)
+        // Propriétés
+        public int Id { get; }
+        public string Name { get; set; }
+        public POKEMON_TYPE Type { get; set; }
+        public int Power { get; set; }
+        public int Accuracy { get; set; }
+        public POKEMON_STATUS Status { get; set; }
+        public int PowerPerRound { get => Power / 3; }
+        public bool AttackMissed { get; set; }
+
+        // Constructeurs
+        public Capacity(int id, string name, POKEMON_TYPE type, int power, int accuracy, POKEMON_STATUS status = POKEMON_STATUS.NORMAL)
         {
+            Id = id;
             Name = name;
             Type = type;
             Power = power;
             Accuracy = accuracy;
-            Status = effet; 
+            Status = status;
+            AttackMissed = false; // Par défaut, l'attaque ne rate pas
         }
-         
-        //METHODES
+
+        // Méthodes
         public void AttackBuff(Pokemon target)
         {
-            target.Attack = target.Attack + Power;
+            target.Attack += Power;
         }
+
         public void DefenseBuff(Pokemon target)
         {
-            target.Defense = target.Defense + Power;
+            target.Defense += Power;
         }
+
         public void AttackSpeBuff(Pokemon target)
         {
-            target.SpecialAttack = target.SpecialAttack + Power;
+            target.SpecialAttack += Power;
         }
+
         public void DefenseSpeBuff(Pokemon target)
         {
-            target.SpecialDefense = target.SpecialDefense + Power;
+            target.SpecialDefense += Power;
         }
+
         public void SpeedBuff(Pokemon target)
         {
-            target.Speed = target.Speed + Power;
+            target.Speed += Power;
         }
+
         public void ApplyStatus(Pokemon target)
         {
             target.Status = Status;
         }
+
         public void CapacityDamage(Pokemon target)
         {
-            
-            if (AttackMissed == false)
+            if (!AttackMissed)
             {
-                target.Hp = target.Hp - Power;
-            }
-            else
-            {
-                return;
+                target.Hp -= Power;
             }
         }
 
@@ -61,32 +72,15 @@
             {
                 AttackMissed = false;
             }
-            if (rand.Next(0, 101)<= Accuracy)
+            else if (rand.Next(0, 101) <= Accuracy)
             {
                 AttackMissed = false;
             }
-            else 
-            { 
+            else
+            {
                 AttackMissed = true;
                 Console.WriteLine("Attack missed");
             }
         }
-        //METHODES GETTER / SETTER
-        public string Name { get => _name; set => _name = value; }
-        public POKEMON_TYPE Type { get => _type; set => _type = value; }
-        public int Power { get => _power; set => _power = value; }
-        public int Accuracy { get => _accuracy; set => _accuracy = value; }
-        public POKEMON_STATUS Status { get => _status; set => _status = value; }
-        public int PowerPerRound { get => _powerPerRound; set => _powerPerRound = Power / 3; }
-        public bool AttackMissed { get => _attackMissed; set=> _attackMissed = value; }
-
-        //VARIABLES PRIVEES
-        private string _name;
-        private POKEMON_TYPE _type;
-        private int _power;
-        private int _accuracy;
-        private POKEMON_STATUS _status;
-        private int _powerPerRound;
-        private bool _attackMissed = false;
     }
 }

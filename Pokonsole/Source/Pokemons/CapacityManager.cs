@@ -1,46 +1,66 @@
-﻿using System.Security.AccessControl;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using Pokonsole.Source.Pokemons;
 
 namespace Pokonsole.Source.Pokemons
 {
     internal class CapacityManager
     {
+        private string FilePath { get; }
+        private Dictionary<int, Capacity> capacities; // Utilisez un int comme clé pour l'identifiant unique de la capacité
 
-        Dictionary<string, Capacity> capacitys;
-
-        public IReadOnlyDictionary<string, Capacity> Capacitys { get => capacitys; }
+        public IReadOnlyDictionary<int, Capacity> Capacities { get => capacities; }
 
         public CapacityManager()
         {
-
-            capacitys = new Dictionary<string, Capacity>();
-
+            FilePath = "../../../Source/Data/Capacities.json";
+            capacities = new Dictionary<int, Capacity>(); // Utilisez un int comme clé pour l'identifiant unique de la capacité
+            LoadCapacities();
         }
 
-        ~CapacityManager()
+        private void LoadCapacities()
         {
+            try
+            {
+                if (File.Exists(FilePath))
+                {
+                    string jsonString = File.ReadAllText(FilePath);
+                    List<Capacity> capacityList = JsonSerializer.Deserialize<List<Capacity>>(jsonString);
 
+                    foreach (Capacity capacity in capacityList)
+                    {
+                        capacities.Add(capacity.Id, capacity); // Utilisez l'identifiant unique comme clé
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Capacities data file not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading capacities data: {ex.Message}");
+            }
         }
 
-        private float _CapacityCreated = 0.0f;
-
-
-        public Capacity createNewCapacity(string Name, POKEMON_TYPE type, int Power, int Précision)
+        public Capacity CreateNewCapacity(string Name, POKEMON_TYPE type, int Power, int Precision)
         {
-            Capacity c = new Capacity(Name, type, Power, Précision);
-            _CapacityCreated += 1;
+            // Générez un identifiant unique pour la nouvelle capacité
+            int newId = capacities.Count + 1;
+            Capacity c = new Capacity(newId, Name, type, Power, Precision);
+            capacities.Add(newId, c);
             return c;
         }
 
-        public Capacity createNewCapacity(string Name, POKEMON_TYPE type, int Power, int Précision, POKEMON_STATUS Poison)
+        public Capacity CreateNewCapacity(string Name, POKEMON_TYPE type, int Power, int Precision, POKEMON_STATUS status)
         {
-            Capacity c = new Capacity(Name, type, Power, Précision, Poison);
-            _CapacityCreated += 1;
+            // Générez un identifiant unique pour la nouvelle capacité
+            int newId = capacities.Count + 1;
+            Capacity c = new Capacity(newId, Name, type, Power, Precision, status);
+            capacities.Add(newId, c);
             return c;
-        }
-
-        internal void addDico(string StrKey, Capacity VarName)
-        {
-            capacitys.Add(StrKey, VarName);
         }
     }
 }

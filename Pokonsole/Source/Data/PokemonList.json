@@ -15,6 +15,6 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [ 1, 2, 3 ]
   }
 ]

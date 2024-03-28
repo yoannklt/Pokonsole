@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "tackle",
+    "power": 40,
+    "type": 0,
+    "accuracy": 100
+  },
+  {
+    "id": 2,
+    "name": "thunder shock",
+    "power": 40,
+    "type": 7,
+    "accuracy": 100
+  },
+  {
+    "id": 3,
+    "name": "quick attack",
+    "power": 40,
+    "type": 0,
+    "accuracy": 100
+  },
+  {
+    "id": 4,
+    "name": "scratch",
+    "power": 40,
+    "type": 0,
+    "accuracy": 100
+  },
+  {
+    "id": 5,
+    "name": "ember",
+    "power": 40,
+    "type": 1,
+    "accuracy": 100
+  },
+  {
+    "id": 6,
+    "name": "water gun",
+    "power": 40,
+    "type": 2,
+    "accuracy": 100
+  },
+  {
+    "id": 7,
+    "name": "vine whip",
+    "power": 40,
+    "type": 3,
+    "accuracy": 100
+  }
+]
