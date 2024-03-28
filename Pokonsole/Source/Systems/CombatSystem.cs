@@ -10,6 +10,7 @@ using Pokonsole.Source.Items.Balls;
 using Pokonsole.Source.Items.Potions;
 using Pokonsole.Source.Actors;
 using Pokonsole.Source.Actors.Player;
+using System.Media;
 
 namespace Pokonsole.Source.Systems
 {
@@ -18,6 +19,8 @@ namespace Pokonsole.Source.Systems
         public CombatSystem() { }
         public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
+            SoundPlayer combatMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/combat_music.wav");
+            combatMusic.Play();
             bool ranAway = false;
             bool isPlayerTurn = true;
             if (pokemon1 == null || pokemon2 == null) { return; }
