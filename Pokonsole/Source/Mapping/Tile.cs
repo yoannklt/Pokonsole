@@ -67,6 +67,9 @@ namespace Pokonsole.Source.Mapping
                 case TileType.PLAYER:
                     Console.BackgroundColor = ConsoleColor.Magenta;
                     return " ";
+                case TileType.ENEMY:
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    return " ";
 
                 default:
                     return " ";

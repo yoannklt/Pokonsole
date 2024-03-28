@@ -94,6 +94,8 @@ namespace Pokonsole.Source.Mapping
 
                 case '7':
                     return TileType.DOOR;
+                case '8':
+                    return TileType.ENEMY;
 
                 default : return TileType.EMPTY;
             }
