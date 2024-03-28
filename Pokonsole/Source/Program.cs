@@ -63,8 +63,10 @@
 
 
 using Pokonsole.Source.Core;
+using Pokonsole.Source.Core.GameState;
 using Pokonsole.Source.Mapping;
 using Pokonsole.Source.Pokemons;
+using System.Security.Cryptography.X509Certificates;
 
 public class Program
 {
@@ -74,18 +76,48 @@ public class Program
 
         Console.CursorVisible = false;
         GameManager game = new GameManager();
+        GameState gameState = new GameState();
 
         game.Map.LoadMap();
         game.Map.PlaceTile(TileType.PLAYER, game.Player.Position.X, game.Player.Position.Y);
         game.Draw();
 
-        
-
-        while (game._Running)
+        while (gameState._flag != GameState.GAMESTATE.GAME_OVER)
         {
-            game.HandleEvent();
-            game.Update();
+            switch (gameState._flag)
+            {
+                case GameState.GAMESTATE.MAIN_MENU:
+                    gameState.GameStateCheck();
+                    break;
+
+                case GameState.GAMESTATE.GAME:
+
+                    do
+                    {
+                        game.Update();
+                        game.HandleEvent();
+                    }
+                    while (game._Running);
+                    game.Quit();
+                    break;
+
+                case GameState.GAMESTATE.COMBAT:
+
+                    break;
+
+                case GameState.GAMESTATE.INVENTORY:
+
+                    break;
+
+                case GameState.GAMESTATE.PAUSE:
+
+                    break;
+
+                case GameState.GAMESTATE.GAME_OVER:
+
+                    break;
+            }
         }
-        game.Quit();
+        
     }
 }
