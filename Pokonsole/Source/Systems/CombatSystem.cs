@@ -28,9 +28,11 @@ namespace Pokonsole.Source.Systems
             if (pokemon1 != null && pokemon2 != null)
             {
                 SetInCombat(pokemon1, pokemon2);
+                bool flee = false;
                 //Gestion de la boucle principale du combat
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
+                    Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                     if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
                     { 
                         if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
@@ -44,6 +46,7 @@ namespace Pokonsole.Source.Systems
                         Console.WriteLine("Options de jeu :");
                         Console.WriteLine("1. Attaquer");
                         Console.WriteLine("2. Utiliser un objet");
+                        Console.WriteLine("3. Prendre la fuite");
 
                         Console.Write("Choisissez une action : ");
                         string input = Console.ReadLine();
@@ -69,13 +72,19 @@ namespace Pokonsole.Source.Systems
                                         Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "2":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(1).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(1));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "3":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(2).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(2));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     case "4":
-                                        //UseAbility(pokemon1, pokemon2 , NomCapacitée)
+                                        Console.WriteLine(pokemon1.Name + " attaque " + pokemon1.GetCapacity(3).Name);
+                                        UseAbility(pokemon1, pokemon2, pokemon1.GetCapacity(3));
+                                        Console.WriteLine(pokemon2.Hp);
                                         break;
                                     default:
                                         Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
@@ -116,10 +125,13 @@ namespace Pokonsole.Source.Systems
                                         Console.WriteLine("Option invalide. Veuillez entrer un numéro valide");
                                         break;
                                 }
-
-
                                 break;
                             // Ajoutez d'autres cas pour gérer d'autres options...
+                            case "3":
+                                //pokemon1.IsKnockOut = true;
+                                flee = true;
+                                Console.WriteLine("Vous avez fuit le combat");
+                                break;
                             default:
                                 Console.WriteLine("Option invalide. Veuillez entrer un numéro valide.");
                                 break;
@@ -152,6 +164,9 @@ namespace Pokonsole.Source.Systems
                             }
                         }
                     }
+
+                    if (flee) break;
+
                     isPlayerTurn = !isPlayerTurn;
                 }
 
@@ -177,7 +192,7 @@ namespace Pokonsole.Source.Systems
                 }
 
             }
-
+            combatMusic.Stop();
         }
 
         public void SetInCombat(Pokemon pokemon1, Pokemon pokemon2)
