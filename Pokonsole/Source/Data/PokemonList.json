@@ -15,7 +15,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Ivysaur",
@@ -33,7 +33,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Venusaur",
@@ -51,7 +51,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Charmander",
@@ -69,7 +69,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Charmeleon",
@@ -87,7 +87,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Charizard",
@@ -105,7 +105,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Squirtle",
@@ -123,7 +123,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Wartortle",
@@ -141,7 +141,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Blastoise",
@@ -159,7 +159,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Caterpie",
@@ -177,7 +177,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Metapod",
@@ -195,7 +195,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Butterfree",
@@ -213,7 +213,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Weedle",
@@ -231,7 +231,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Kakuna",
@@ -249,7 +249,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Beedrill",
@@ -267,7 +267,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Pidgey",
@@ -285,7 +285,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Pidgeotto",
@@ -303,7 +303,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Pidgeot",
@@ -321,7 +321,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Rattata",
@@ -339,7 +339,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Raticate",
@@ -357,7 +357,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Spearow",
@@ -375,7 +375,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Fearow",
@@ -393,7 +393,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Ekans",
@@ -411,7 +411,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Arbok",
@@ -429,7 +429,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Pikachu",
@@ -447,7 +447,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Raichu",
@@ -465,7 +465,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Sandshrew",
@@ -483,7 +483,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Sandslash",
@@ -501,7 +501,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidoran ♀",
@@ -519,7 +519,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidorina",
@@ -537,7 +537,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidoqueen",
@@ -555,7 +555,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidoran ♂",
@@ -573,7 +573,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidorino",
@@ -591,7 +591,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Nidoking",
@@ -609,7 +609,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Clefairy",
@@ -627,7 +627,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Clefable",
@@ -645,7 +645,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Vulpix",
@@ -663,7 +663,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Ninetales",
@@ -681,7 +681,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Jigglypuff",
@@ -699,7 +699,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Wigglytuff",
@@ -717,7 +717,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Zubat",
@@ -735,7 +735,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Golbat",
@@ -753,7 +753,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Oddish",
@@ -771,7 +771,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Gloom",
@@ -789,7 +789,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Vileplume",
@@ -807,7 +807,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Paras",
@@ -825,7 +825,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Parasect",
@@ -843,7 +843,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Venonat",
@@ -861,7 +861,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Venomoth",
@@ -879,7 +879,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Diglett",
@@ -897,7 +897,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Dugtrio",
@@ -915,7 +915,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Meowth",
@@ -933,7 +933,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Persian",
@@ -951,7 +951,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Psyduck",
@@ -969,7 +969,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Golduck",
@@ -987,7 +987,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Mankey",
@@ -1005,7 +1005,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Primeape",
@@ -1023,7 +1023,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Growlithe",
@@ -1041,7 +1041,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Arcanine",
@@ -1059,7 +1059,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Poliwag",
@@ -1077,7 +1077,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Poliwhirl",
@@ -1095,7 +1095,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Poliwarth",
@@ -1113,7 +1113,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Abra",
@@ -1131,7 +1131,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Kadabra",
@@ -1149,7 +1149,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Alakazam",
@@ -1167,7 +1167,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Machop",
@@ -1185,7 +1185,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Machoke",
@@ -1203,7 +1203,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Machamp",
@@ -1221,7 +1221,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Bellsprout",
@@ -1239,7 +1239,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Weepinbell",
@@ -1257,7 +1257,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Victreebel",
@@ -1275,7 +1275,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Tentacool",
@@ -1293,7 +1293,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Tentacruel",
@@ -1311,7 +1311,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Geodude",
@@ -1329,7 +1329,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Graveler",
@@ -1347,7 +1347,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Golem",
@@ -1365,7 +1365,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Ponyta",
@@ -1383,7 +1383,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Rapidash",
@@ -1401,7 +1401,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Slowpoke",
@@ -1419,7 +1419,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Slowbro",
@@ -1437,7 +1437,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Magnemite",
@@ -1455,7 +1455,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Magneton",
@@ -1473,7 +1473,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Farfetch'd",
@@ -1491,7 +1491,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Doduo",
@@ -1509,7 +1509,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Dodrio",
@@ -1527,7 +1527,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Seel",
@@ -1545,7 +1545,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Dewgong",
@@ -1563,7 +1563,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Grimer",
@@ -1581,7 +1581,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Muk",
@@ -1599,7 +1599,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Shellder",
@@ -1617,7 +1617,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Cloyster",
@@ -1635,7 +1635,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Gastly",
@@ -1653,7 +1653,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Hunter",
@@ -1671,7 +1671,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Gengar",
@@ -1689,7 +1689,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Onix",
@@ -1707,7 +1707,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Drowzee",
@@ -1725,7 +1725,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Hypno",
@@ -1743,7 +1743,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Krabby",
@@ -1761,7 +1761,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Krabboss",
@@ -1779,7 +1779,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Voltorb",
@@ -1797,7 +1797,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Electrode",
@@ -1815,7 +1815,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Exeggcute",
@@ -1833,7 +1833,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Exeggutor",
@@ -1851,7 +1851,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Cubone",
@@ -1869,7 +1869,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Marowak",
@@ -1887,7 +1887,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Hitmonlee",
@@ -1905,7 +1905,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Hitmonchan",
@@ -1923,7 +1923,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Lickitung",
@@ -1941,7 +1941,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Koffing",
@@ -1959,7 +1959,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Weezing",
@@ -1977,7 +1977,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Rhyhorn",
@@ -1995,7 +1995,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Rhydon",
@@ -2013,7 +2013,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Chansey",
@@ -2031,7 +2031,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Tangela",
@@ -2049,7 +2049,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Kangaskhan",
@@ -2067,7 +2067,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Horsea",
@@ -2085,7 +2085,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Seadra",
@@ -2103,7 +2103,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Goldeen",
@@ -2121,7 +2121,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Seaking",
@@ -2139,7 +2139,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Stari",
@@ -2157,7 +2157,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Staross",
@@ -2175,7 +2175,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Mr.Mime",
@@ -2193,7 +2193,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Scyther",
@@ -2211,7 +2211,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Jynx",
@@ -2229,7 +2229,7 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": []
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   },
   {
     "Name": "Elecabuzz",
@@ -2247,6 +2247,476 @@
     "IsKnockOut": false,
     "IsInCombat": false,
     "IsMyTurn": false,
-    "CapacityList": [ 1, 2, 3 ]
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Magmar",
+    "Type": 1,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Pinsir",
+    "Type": 6,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Tauros",
+    "Type": 0,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Magikarp",
+    "Type": 2,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Gyarados",
+    "Type": 2,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Lapras",
+    "Type": 2,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Ditto",
+    "Type": 0,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Eevee",
+    "Type": 0,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Vaporeon",
+    "Type": 2,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Jolteon",
+    "Type": 7,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Flareon",
+    "Type": 1,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Porygon",
+    "Type": 0,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Omanyte",
+    "Type": 9,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Omastar",
+    "Type": 9,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Kabuto",
+    "Type": 9,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Kabutops",
+    "Type": 9,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Aerodactyl",
+    "Type": 9,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Snorlax",
+    "Type": 0,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Articuno",
+    "Type": 13,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Zapdos",
+    "Type": 7,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Moltres",
+    "Type": 1,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Dratini",
+    "Type": 14,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Dragonair",
+    "Type": 14,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Dragonite",
+    "Type": 14,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
+  },
+  {
+    "Name": "Mewtwo",
+    "Type": 11,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}
+
+    ]
+  },
+  {
+    "Name": "Mew",
+    "Type": 11,
+    "Status": 0,
+    "Hp": 35,
+    "Level": 1,
+    "Attack": 55,
+    "Defense": 40,
+    "Speed": 90,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Accuracy": 100,
+    "IsWild": false,
+    "IsKnockOut": false,
+    "IsInCombat": false,
+    "IsMyTurn": false,
+    "CapacityList": [{"Name": "Flamethrower", "Type": 1,"Power": 10,"Accuracy": 100},{"Name": "Fire Blast","Type": 1,"Power": 20,"Accuracy": 100}]
   }
 ]

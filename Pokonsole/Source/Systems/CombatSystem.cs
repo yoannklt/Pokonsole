@@ -19,7 +19,7 @@ namespace Pokonsole.Source.Systems
         public CombatSystem() { }
         public void CreateNewCombat(Player player,Pokemon pokemon1, Pokemon pokemon2)
         {
-            SoundPlayer combatMusic = new SoundPlayer("C:/Users/coelh/source/repos/Pokonsole/Pokonsole/Source/Utils/combat_music.wav");
+            SoundPlayer combatMusic = new SoundPlayer("../../../Source/Utils/combat_music.wav");
             combatMusic.Play();
             bool ranAway = false;
             bool isPlayerTurn = true;
@@ -29,18 +29,25 @@ namespace Pokonsole.Source.Systems
             {
                 SetInCombat(pokemon1, pokemon2);
                 bool flee = false;
+                Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
                 //Gestion de la boucle principale du combat
                 while (pokemon1.IsKnockOut == false && pokemon2.IsKnockOut == false)
                 {
-                    Console.WriteLine(pokemon1.Name + " entre en combat contre " + pokemon2.Name);
-                    if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0) 
-                    { 
-                        if (pokemon1.Hp <= 0) { pokemon1.IsKnockOut = true; }
-                        if (pokemon2.Hp <= 0) { pokemon2.IsKnockOut = true; }
+                    if (pokemon1.Hp <= 0 || pokemon2.Hp <= 0)
+                    {
+                        if (pokemon1.Hp <= 0) { 
+                            pokemon1.IsKnockOut = true;
+                            break;
+                        }
+                        if (pokemon2.Hp <= 0) { 
+                            pokemon2.IsKnockOut = true;
+                            break;
+                        }
                     }
 
                     if (isPlayerTurn)
                     {
+                        
 
                         Console.WriteLine("Player 1's turn :");
                         Console.WriteLine("Options de jeu :");
@@ -128,7 +135,6 @@ namespace Pokonsole.Source.Systems
                                 break;
                             // Ajoutez d'autres cas pour gérer d'autres options...
                             case "3":
-                                //pokemon1.IsKnockOut = true;
                                 flee = true;
                                 Console.WriteLine("Vous avez fuit le combat");
                                 break;
@@ -143,7 +149,7 @@ namespace Pokonsole.Source.Systems
                         if (pokemon2.IsWild == false)
                         {
                             var randomIAMove = new Random();
-                            UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 4)));
+                            UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 2)));
                             //Console.WriteLine(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
                         }
                         else
@@ -152,7 +158,7 @@ namespace Pokonsole.Source.Systems
                             if (randomIAMove.Next(0, 100) >= 90)
                             {
                                 //random attack entre capa 1 à 4
-                                UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 4)));
+                                UseAbility(pokemon2, pokemon1, pokemon2.GetCapacity(randomIAMove.Next(1, 2)));
                                 //Console.WriteLine(pokemon2.Name + " a utilisé" + pokemon2.GetCapacity(randomIAMove.Next(1, 4)).Name + " sur " + pokemon1.Name);
                             }
                             else
