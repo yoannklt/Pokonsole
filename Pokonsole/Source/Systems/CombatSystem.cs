@@ -50,6 +50,17 @@ namespace Pokonsole.Source.Systems
                         if (pokemon2.Hp <= 0) { pokemon2.IsKnockOut = true; }
                     }
 
+                    Console.SetCursorPosition(player.Map.Size.X * 2 + 4, 20);
+                    Console.Write(pokemon1.Name + " " + "lvl :" + pokemon1.Level + " " + "HP :" + pokemon1.Hp + " " + "status :" + pokemon1.Status + " " + "ATK :" + pokemon1.Attack + " " + "DEF :" + pokemon1.Defense);
+                    Console.SetCursorPosition(player.Map.Size.X * 2 + 4, 21);
+                    Console.Write("Knock ? :" + pokemon1.IsKnockOut + " " + "Wild ? :" + pokemon1.IsWild + " " + "SPEED :" + pokemon1.Speed + " " + "SPE ATK :" + pokemon1.SpecialAttack + " " + "SPE DEF :" + pokemon1.SpecialDefense + " " + "Type :" + pokemon1.Type);
+
+                    Console.SetCursorPosition(player.Map.Size.X * 2 + 4, 22);
+                    Console.Write(pokemon2.Name + " " + "lvl :" + pokemon2.Level + " " + "HP :" + pokemon2.Hp + " " + "status :" + pokemon2.Status + " " + "ATK :" + pokemon2.Attack + " " + "DEF :" + pokemon2.Defense);
+                    Console.SetCursorPosition(player.Map.Size.X * 2 + 4, 23);
+                    Console.Write("Knock ? :" + pokemon2.IsKnockOut + " " + "Wild ? :" + pokemon2.IsWild + " " + "SPEED :" + pokemon2.Speed + " " + "SPE ATK :" + pokemon2.SpecialAttack + " " + "SPE DEF :" + pokemon2.SpecialDefense + " " + "Type :" + pokemon2.Type);
+                    Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line);
+
                     if (isPlayerTurn)
                     {
                         ClearBuffer(ref player);

@@ -11,9 +11,11 @@ namespace Pokonsole.Source.Actors.Player
     internal class Player : Actor
     {
         PokemonManager _pkmnManager;
+        public List<Pokemon> _myPokemons;
         public Player(ref Map map, PokemonManager pkmnManager) : base(ref map)
         { 
             _pkmnManager = pkmnManager;
+            _myPokemons = new List<Pokemon>();
             Inventory = new Inventory();
             Inventory.AddItem(new StandardPotion());
             Inventory.AddItem(new StandardPotion());
@@ -44,7 +46,7 @@ namespace Pokonsole.Source.Actors.Player
                 case TileType.ENEMY:
                     CombatSystem combatSystem = new CombatSystem();
                     var random = new Random();
-                    combatSystem.CreateNewCombat(this, _pkmnManager.ListAllPokemons[0], _pkmnManager.ListAllPokemons[random.Next(0, _pkmnManager.ListAllPokemons.Count)]) ;
+                    combatSystem.CreateNewCombat(this, this._myPokemons[0], _pkmnManager.ListAllPokemons[random.Next(0, _pkmnManager.ListAllPokemons.Count)]) ;
                     return "";
                 case TileType.ITEM:
                     return "Object collected: ";
@@ -65,7 +67,13 @@ namespace Pokonsole.Source.Actors.Player
                     }
                     return "";
                 case TileType.POKEMON:
-                    Console.Write("test");
+                    var randomPokemon = new Random();
+                    this._myPokemons.Add(_pkmnManager.ListAllPokemons[randomPokemon.Next(0, _pkmnManager.ListAllPokemons.Count)]);
+                    for (int i = 0; i < this._myPokemons.Count(); i++)
+                    {
+                        Console.SetCursorPosition(this.Map.Size.X * 2 + 4, i + 1);
+                        Console.Write(this._myPokemons[i].Name);
+                    } ;
                     return "";
 
                 default:
