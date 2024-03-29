@@ -64,6 +64,9 @@ namespace Pokonsole.Source.Actors.Player
                         SetPosition(10, 19);
                     }
                     return "";
+                case TileType.POKEMON:
+                    Console.Write("test");
+                    return "";
 
                 default:
                     return "";
