@@ -12,21 +12,22 @@ namespace Pokonsole.Source.Systems
         {
             int line = 1;
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line);
-            Console.Write("                                            ");
+            Console.Write("                                                                           ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line + 1);
-            Console.Write("                                            ");
+            Console.Write("                                                                        ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line + 2);
-            Console.Write("                                            ");
+            Console.Write("                                                                        ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line + 3);
-            Console.Write("                                            ");
+            Console.Write("                                                                    ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line + 4);
-            Console.Write("                                            ");
+            Console.Write("                                                                      ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line + 5);
-            Console.Write("                                            ");
+            Console.Write("                                                                    ");
             Console.SetCursorPosition(player.Map.Size.X * 2 + 4, line);
         }
         public void CreateNewCombat(Player player, Pokemon pokemon1, Pokemon pokemon2)
         {
+            ClearBuffer(ref player);
             SoundPlayer combatMusic = new SoundPlayer("../../../Source/Utils/combat_music.wav");
             combatMusic.Play();
             bool ranAway = false;
