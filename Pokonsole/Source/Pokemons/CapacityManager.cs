@@ -17,33 +17,33 @@ namespace Pokonsole.Source.Pokemons
         {
             FilePath = "../../../Source/Data/Capacities.json";
             capacities = new Dictionary<int, Capacity>(); // Utilisez un int comme clé pour l'identifiant unique de la capacité
-            LoadCapacities();
+            //LoadCapacities();
         }
 
-        private void LoadCapacities()
-        {
-            try
-            {
-                if (File.Exists(FilePath))
-                {
-                    string jsonString = File.ReadAllText(FilePath);
-                    List<Capacity> capacityList = JsonSerializer.Deserialize<List<Capacity>>(jsonString);
+        //private void LoadCapacities()
+        //{
+        //    try
+        //    {
+        //        if (File.Exists(FilePath))
+        //        {
+        //            string jsonString = File.ReadAllText(FilePath);
+        //            List<Capacity> capacityList = JsonSerializer.Deserialize<List<Capacity>>(jsonString);
 
-                    foreach (Capacity capacity in capacityList)
-                    {
-                        capacities.Add(capacity.Id, capacity); // Utilisez l'identifiant unique comme clé
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Capacities data file not found.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading capacities data: {ex.Message}");
-            }
-        }
+        //            foreach (Capacity capacity in capacityList)
+        //            {
+        //                capacities.Add(capacity.Id, capacity); // Utilisez l'identifiant unique comme clé
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Capacities data file not found.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Error loading capacities data: {ex.Message}");
+        //    }
+        //}
 
         public Capacity CreateNewCapacity(string Name, POKEMON_TYPE type, int Power, int Precision)
         {
